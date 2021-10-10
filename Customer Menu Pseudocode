@@ -1,0 +1,42 @@
+String: Snacks, Food/Meal, Hot Drinks, Cold Drinks
+DECLARE ourStock : ARRAY[0,16] of INT
+customerMenu () {
+1. Display options
+Snacks =” M&M (N$10) (0001), Maltesers (N$12) (0002), Jelly Beans (N$7) (0003), sour Worms (N$8) (0004)”
+Food/Meal =” Eggs salad sandwich(N$35) (0007), Pie (N$25) (0008), Burger (N$30) (0009)”
+Hot Drinks = “Latte(N$25) (0100), Tea(N$15) (0200), Cappuccino(N$25) (0300), Hot chocolate(N$15) (0400)”
+Cold Drinks = “Coke(N$15) (0500), Dr. Pepper(N$10) (0600), Pepsi(N$10) (0700), TAB(N$10) (0800), Sprite(N$10) (0900)”
+Exit menu
+2. Set 
+       M&M(N$10) = 0001
+	Maltesers(N$12) = 0002
+	Jelly Beans(N$7) = 0003
+	Sour worms(N$8) = 0004
+	Egg salad sandwich(N$35) = 0007
+	Pie(N$25) = 0008
+	Burger(N$30) = 0009
+	Latte(N$25) = 0100
+	Tea(N$15) = 0200
+	Cappuccino(N$25) = 0300
+	Hot chocolate(N$15) = 0400
+	Coke(N$15) = 0500
+Dr. Pepper(N$10) = 0600
+	Pepsi(N$10) = 0700
+	TAB(N$10) = 0800
+	Sprite(N$10) = 0900
+
+3. Prompt user for selection 
+4. Get selection
+for i = 0 to (n - 1) by 1 do
+  if (ourStock [i] = userSelection) then
+     set loc = i 
+       Exit 
+   endif 
+endfor
+ set loc = -1 
+elseif
+(customer choice == 5) then 
+customerMenu ()
+ end if
+endCase }
+5. End
