@@ -1,14 +1,14 @@
 String: Error_message 
 Variables: code, Item_code, owners_pin
 Integer: code, Item_code, owners_pin
-1.	Start
-2.	Prompt user for code
-3.	Get code 
-4.	 if code == Item_code
-   THEN Customer menu()
-     elseif code == owners_pin
-       THEN Owner_menu()
-         else display Error_message
-      endif 
- endif 
-5.	End. 
+Start
+Prompt user for code
+Get code 
+if code == Item_code
+ THEN Customer menu()
+   elseif code == owners_pin
+     THEN Owner_menu()
+       else display Error_message
+    endif 
+    endif 
+    End. 
