@@ -2,28 +2,28 @@ String: Snacks, Food/Meal, Hot Drinks, Cold Drinks
 DECLARE ourStock : ARRAY[0,16] of INT
 customerMenu () {
 1. Display options
-Snacks =” M&M (N$10) (0001), Maltesers (N$12) (0002), Jelly Beans (N$7) (0003), sour Worms (N$8) (0004)”
-Food/Meal =” Eggs salad sandwich(N$35) (0007), Pie (N$25) (0008), Burger (N$30) (0009)”
-Hot Drinks = “Latte(N$25) (0100), Tea(N$15) (0200), Cappuccino(N$25) (0300), Hot chocolate(N$15) (0400)”
-Cold Drinks = “Coke(N$15) (0500), Dr. Pepper(N$10) (0600), Pepsi(N$10) (0700), TAB(N$10) (0800), Sprite(N$10) (0900)”
+Snacks =” M&M (N$10) (C0001), Maltesers (N$12) (C0002), Jelly Beans (N$7) (C0003), sour Worms (N$8) (C0004)”
+Food/Meal =” Eggs salad sandwich(N$35) (C0007), Pie (N$25) (C0008), Burger (N$30) (C0009)”
+Hot Drinks = “Latte(N$25) (C0100), Tea(N$15) (C0200), Cappuccino(N$25) (C0300), Hot chocolate(N$15) (C0400)”
+Cold Drinks = “Coke(N$15) (C0500), Dr. Pepper(N$10) (C0600), Pepsi(N$10) (C0700), TAB(N$10) (C0800), Sprite(N$10) (C0900)”
 Exit menu
 2. Set 
-       0001 = M&M(N$10)
-       0002 = Maltesers(N$12)
-       0003 = Jelly Beans(N$7)
-       0004 = Sour worms(N$8)
-       0007 = Egg salad sandwich(N$35)
-       0008 = Pie(N$25)
-       0009 = Burger(N$30)
-       0100 = Latte(N$25) 
-       0200 = Tea(N$15)
-       0300 = Cappuccino(N$25)
-       0400 = Hot chocolate(N$15)
-       0500 = Coke(N$15) 
-       0600 = Dr. Pepper(N$10)
-       0700 = Pepsi(N$10)
-       0800 = TAB(N$10)
-       0900 = Sprite(N$10)
+       C0001 = M&M(N$10)
+       C0002 = Maltesers(N$12)
+       C0003 = Jelly Beans(N$7)
+       C0004 = Sour worms(N$8)
+       C0007 = Egg salad sandwich(N$35)
+       C0008 = Pie(N$25)
+       C0009 = Burger(N$30)
+       C0100 = Latte(N$25) 
+       C0200 = Tea(N$15)
+       C0300 = Cappuccino(N$25)
+       C0400 = Hot chocolate(N$15)
+       C0500 = Coke(N$15) 
+       C0600 = Dr. Pepper(N$10)
+       C0700 = Pepsi(N$10)
+       C0800 = TAB(N$10)
+       C0900 = Sprite(N$10)
 
 3. Prompt user for selection 
 4. Get selection
