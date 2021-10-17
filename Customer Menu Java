@@ -1,0 +1,75 @@
+/**
+* I hereby acknowledge that the work handed in is my own original work. If I
+* have quoted from any other source this information has been correctly referenced.
+* I also declare that I have read the Namibia University of Science and Technology
+* Policies on Academic Honesty and Integrity as indicated in my course outline and
+* the NUST general information and regulations - Yearbook 2021
+*
+* @authors <Abisai Sem> <221084703>, <Darren Benade> <>, <Shange Shikongo> <>, <George Diyeve> <>, <Darlene Daniels> <>, Chaiiu Kamanya <> ;
+*/
+import java.util.Scanner; 
+
+
+public class landingPage {
+
+	public static void main(String[] args) {
+		int Item_code = 3692;
+		int owners_pin = 4812;
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Please enter code");
+		int Code = userInput.nextInt();
+		if (Code == Item_code){customerMenu();}
+			   else if (Code == owners_pin){
+			     Owner_menu();}
+	    else {System.out.println("Error_message");}
+		//* Functions need to be created to remove errors
+		//* END OF LANDING PAGE
+		
+		class main {
+			  static void customerMenu() {
+			    System.out.println("Snacks =” M&M (N$10) (C0001), Maltesers (N$12) (C0002), Jelly Beans (N$7) (C0003), sour Worms (N$8) (C0004)”\r\n"
+			    		+ "Food/Meal =” Eggs salad sandwich(N$35) (C0007), Pie (N$25) (C0008), Burger (N$30) (C0009)”\r\n"
+			    		+ "Hot Drinks = “Latte(N$25) (C0100), Tea(N$15) (C0200), Cappuccino(N$25) (C0300), Hot chocolate(N$15) (C0400)”\r\n"
+			    		+ "Cold Drinks = “Coke(N$15) (C0500), Dr. Pepper(N$10) (C0600), Pepsi(N$10) (C0700), TAB(N$10) (C0800), Sprite(N$10) (C0900)”\r\n"
+			    		+ "Exit menu");
+			   String C0001 = "M&M(N$10)";
+		       String C0002 = "Maltesers(N$12)";
+			   String C0003 = "Jelly Beans(N$7)";
+			   String C0004 = "Sour worms(N$8)";
+			   String C0007 = "Egg salad sandwich(N$35)";
+			   String C0008 = "Pie(N$25)";
+			   String C0009 = "Burger(N$30)";
+			   String C0100 = "Latte(N$25)"; 
+			   String C0200 = "Tea(N$15)";
+			   String C0300 = "Cappuccino(N$25)";
+			   String C0400 = "Hot chocolate(N$15)";
+			   String C0500 = "Coke(N$15)"; 
+			   String C0600 = "Dr. Pepper(N$10)";
+			   String C0700 = "Pepsi(N$10)";
+	     	   String C0800 = "TAB(N$10)";
+			   String C0900 = "Sprite(N$10)";
+			   
+			   System.out.println("Please enter product code for desired selection");
+			   String Customer_selection = userInput.next();
+			   
+			   
+			   public static int linearSearch(int[] arr, String Customer_selection){    
+			        for(int i=0;i<arr.length;i++){    
+			            if(arr[i] == Customer_selection){    
+			                return i;    
+			            }    
+			        }    
+			        return -1;    
+			    }    
+			    public static void main(String a[]){    
+			        int[] a1= {10,20,30,50,70,90};    
+			        int Customer_selection = 50;    
+			        System.out.println(Customer_selection+" is found at index: "+linearSearch(a1, key));    
+			    }    
+			}    
+			   
+			   
+	  }
+     }
+  } 
+}
