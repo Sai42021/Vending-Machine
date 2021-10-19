@@ -19,19 +19,35 @@ public class landingPage {
 		System.out.println("Please enter code");
 		int Code = userInput.nextInt();
 		if (Code == Item_code){customerMenu();}
-			   else if (Code == owners_pin){
-			     Owner_menu();}
-	    else {System.out.println("Error_message");}
+			   else if (Code == owners_pin){Owner_menu();}
+	              else {System.out.println("Error_message");}}
 		//* Functions need to be created to remove errors
 		//* END OF LANDING PAGE
-		
-		class main {
-			  static void customerMenu() {
-			    System.out.println("Snacks =” M&M (N$10) (C0001), Maltesers (N$12) (C0002), Jelly Beans (N$7) (C0003), sour Worms (N$8) (C0004)”\r\n"
-			    		+ "Food/Meal =” Eggs salad sandwich(N$35) (C0007), Pie (N$25) (C0008), Burger (N$30) (C0009)”\r\n"
-			    		+ "Hot Drinks = “Latte(N$25) (C0100), Tea(N$15) (C0200), Cappuccino(N$25) (C0300), Hot chocolate(N$15) (C0400)”\r\n"
-			    		+ "Cold Drinks = “Coke(N$15) (C0500), Dr. Pepper(N$10) (C0600), Pepsi(N$10) (C0700), TAB(N$10) (C0800), Sprite(N$10) (C0900)”\r\n"
-			    		+ "Exit menu");
+		 
+			
+		private static void customerMenu() {
+			    System.out.println("SNACKS "
+			    		+ "M&M (N$10) (C0001) "
+			    		+ "Maltesers (N$12) (C0002) "
+			    		+ "Jelly Beans (N$7) (C0003) "
+			    		+ "Sour Worms (N$8) (C0004)");
+			    System. out.println("FOOD/MEAL "
+			    		+ "Eggs salad sandwich(N$35) (C0007) "
+			    		+ "Pie (N$25) (C0008) "
+			    		+ "Burger (N$30) (C0009)");
+			    System.out.println("HOT DRINKS  "
+			    		+ "“Latte(N$25) (C0100)"
+			    		+ "Tea(N$15) (C0200)"
+			    		+ "Cappuccino(N$25) (C0300)"
+			    		+ "Hot chocolate(N$15) (C0400)");
+			    System.out.println("COLD DRINKS "
+			    		+ "Coke(N$15) (C0500)"
+			    		+ "Dr. Pepper(N$10) (C0600)"
+			    		+ "Pepsi(N$10) (C0700)"
+			    		+ "TAB(N$10) (C0800)"
+			    		+ "Sprite(N$10) (C0900)");
+			    System.out.println("EXIT MENU (C2100)");
+			    
 			   String C0001 = "M&M(N$10)";
 		       String C0002 = "Maltesers(N$12)";
 			   String C0003 = "Jelly Beans(N$7)";
@@ -48,28 +64,72 @@ public class landingPage {
 			   String C0700 = "Pepsi(N$10)";
 	     	   String C0800 = "TAB(N$10)";
 			   String C0900 = "Sprite(N$10)";
+			   String C2100 = "Sorry we couldn't help you";
 			   
+			   Scanner userInput = new Scanner(System.in);
 			   System.out.println("Please enter product code for desired selection");
 			   String Customer_selection = userInput.next();
 			   
+			   switch(Customer_selection) {
+				case C0001: 
+					System.out.println(C0001);
+					break;
+				case C0002: 
+					System.out.println(C0002);
+					break;
+				case C0003:
+					System.out.println(C0003);
+					break;
+				case C0004:
+					System.out.println(C0004);
+					break;
+				case C0007:
+					System.out.println(C0007);
+					break;
+				case C0008:
+					System.out.println(C0008);
+					break;
+				case C0009:
+					System.out.println(C0009);
+					break;
+				case C0100:
+					System.out.println(C0100);
+					break;
+				case C0200:
+					System.out.println(C0200);
+					break;
+				case C0300:
+					System.out.println(C0300);
+					break;
+				case C0400:
+					System.out.println(C0400);
+					break;
+				case C0500:
+					System.out.println(C0500);
+					break;
+				case C0600:
+					System.out.println(C0600);
+					break;
+				case C0700:
+					System.out.println(C0700);
+					break;
+				case C0800:
+					System.out.println(C0800);
+					break;
+				case C0900:
+					System.out.println(C0900);
+					break;
+				case C2100:
+					System.out.println(C2100);}
+			        		
 			   
-			   public static int linearSearch(int[] arr, String Customer_selection){    
-			        for(int i=0;i<arr.length;i++){    
-			            if(arr[i] == Customer_selection){    
-			                return i;    
-			            }    
-			        }    
-			        return -1;    
-			    }    
-			    public static void main(String a[]){    
-			        int[] a1= {10,20,30,50,70,90};    
-			        int Customer_selection = 50;    
-			        System.out.println(Customer_selection+" is found at index: "+linearSearch(a1, key));    
-			    }    
-			}    
+				private static void Owner_menu() {}
+
 			   
 			   
-	  }
-     }
+			   }	  
+	   }
+	 }
   } 
-}
+
+
