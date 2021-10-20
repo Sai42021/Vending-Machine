@@ -2,10 +2,10 @@ Owner's Menu
 String: Error message 
 Integer: Verification Code
 ownerMenu(code){
-startCase
+start
 Prompt Owner for verificationCode
 Get verificationCode
-If (verificationCode == 2460){
+If (verificationCode == 8162){
 Display Menu
 Privilege to restock
 Add New Items to vending machine
