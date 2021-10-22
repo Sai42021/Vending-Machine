@@ -1,0 +1,95 @@
+ public static void ownerMenu() {
+		    int verificationCode = 8162;
+			Scanner userInput = new Scanner(System.in);
+			System.out.println("Please enter verification code: ");
+			int verfationCode = userInput.nextInt();
+			
+			if (verificationCode == 8162){
+				
+				System.out.println("Available products shown below: ");
+				
+				System.out.println(C0001);
+				System.out.println(C0002);
+				System.out.println(C0003);
+				System.out.println(C0004);
+				System.out.println(C0007);
+				System.out.println(C8000);
+				System.out.println(C9000);
+				System.out.println(C0100);
+				System.out.println(C0200);
+				System.out.println(C0300);
+				System.out.println(C0400);
+				System.out.println(C0500);
+				System.out.println(C0600);
+				System.out.println(C0700);
+				System.out.println(C1800);
+				System.out.println(C1900);
+
+				System.out.println("Enter the name and price of item to be re-stocked and the amount you want to add seperated by a single SPACE: "); 
+				Scanner userInput1 = new Scanner(System.in);
+				String ItemtoRestock1 = userInput1.nextLine();
+				int ItemtoRestockParts = ItemtoRestock1.indexOf(" ");
+				String ItemtoRestock = ItemtoRestock1.substring(0,ItemtoRestockParts);
+				String amountToAdd1 = ItemtoRestock1.substring(ItemtoRestock1.lastIndexOf(" ") + 1);
+				
+				ItemtoRestock1 = ItemtoRestock.toLowerCase();
+				int amountToAdd = Integer.parseInt(amountToAdd1);
+				
+				//* We wrote a nested case statement to increment the items counter based on the admins inputs 
+				
+				switch(ItemtoRestock1) {
+				   case  "m&m(n$10)":
+					   C0001count = C0001count + amountToAdd;
+					   System.out.println(C0001count);
+				    break;
+				   case "maltesers(n$12)":
+					   C0002count = C0002count + amountToAdd;
+				    break;
+				   case "jelly-beans(n$7)":
+					   C0003count = C0003count + amountToAdd;
+					    break;
+				   case "sour-worms(n$8)":
+					   C0004count = C0004count + amountToAdd;
+					    break;
+				   case "egg-salad-sandwich(n$35)":
+					   C0007count =  C0007count + amountToAdd;
+					    break;
+				   case "pie(n$25)":
+					   C8000count = C8000count + amountToAdd;
+					    break;
+				   case "burger(n$30)":
+					   C9000count = C9000count + amountToAdd;
+					    break;
+				   case "latte(n$25)":
+					   C0100count = C0100count + amountToAdd;
+					    break;
+				   case "tea(n$15)":
+					   C0200count = C0200count + amountToAdd;
+					    break;
+				   case "cappuccino(n$25)":
+					   C0300count = C0300count + amountToAdd;
+					    break;
+				   case "hot-chocolate(n$15)":
+					   C0400count = C0400count + amountToAdd;
+					    break;
+				   case "coke(n$15)":
+					   C0500count = C0500count + amountToAdd;
+					    break;
+				   case "dr.Pepper(n$10)":
+					   C0600count = C0600count + amountToAdd;
+					    break;
+				   case "pepsi(n$10)":
+					   C0700count = C0700count + amountToAdd;
+					    break;
+				   case "tab(n$10)":
+					   C1800count = C1800count + amountToAdd;
+					    break;
+				   case "sprite(n$10)":
+					   C1900count = C1900count + amountToAdd;
+					    break;
+					default: System.out.println("Invalid entry! Please check your spelling and spacing." + "'" + ItemtoRestock + "'");    
+				    }
+				
+				  }else {System.out.println("Invalid code!! Try again.");}
+				
+			}
