@@ -1,32 +1,40 @@
+Start
 String: Snacks, Food/Meal, Hot Drinks, Cold Drinks
+Int: itemCode, ownersPin
+If code ==3692 then 
+Display customerMenu()
+Else if code == 4812 then
+Display ownersMenu()
+Else Print “error Message”  
 DECLARE ourStock : ARRAY[0,16] of INT
 customerMenu () {
 1. Display options
-Snacks =” M&M (N$10) (C0001), Maltesers (N$12) (C0002), Jelly Beans (N$7) (C0003), sour Worms (N$8) (C0004)”
-Food/Meal =” Eggs salad sandwich(N$35) (C0007), Pie (N$25) (C0008), Burger (N$30) (C0009)”
-Hot Drinks = “Latte(N$25) (C0100), Tea(N$15) (C0200), Cappuccino(N$25) (C0300), Hot chocolate(N$15) (C0400)”
-Cold Drinks = “Coke(N$15) (C0500), Dr. Pepper(N$10) (C0600), Pepsi(N$10) (C0700), TAB(N$10) (C0800), Sprite(N$10) (C0900)”
-Exit menu
+SNACKS = “M&M (N$10) (C0001), Maltesers (N$12) (C0002), Jelly Beans (N$7) (C0003), sour Worms (N$8) (C0004)”
+FOOD/MEAL =” Eggs salad sandwich(N$35) (C0007), Pie (N$25) (C0008), Burger (N$30) (C0009)”
+HOT DRINKS = “Latte(N$25) (C0100), Tea(N$15) (C0200), Cappuccino(N$25) (C0300), Hot chocolate(N$15) (C0400)”
+COLD DRINKS = “Coke(N$15) (C0500), Dr. Pepper(N$10) (C0600), Pepsi(N$10) (C0700), TAB(N$10) (C0800), Sprite(N$10) (C0900)”
+Return to landingPage = “EXIT MENU (C2100)”
 2. Set 
-       C0001 = M&M(N$10)
-       C0002 = Maltesers(N$12)
-       C0003 = Jelly Beans(N$7)
-       C0004 = Sour worms(N$8)
-       C0007 = Egg salad sandwich(N$35)
-       C0008 = Pie(N$25)
-       C0009 = Burger(N$30)
-       C0100 = Latte(N$25) 
-       C0200 = Tea(N$15)
-       C0300 = Cappuccino(N$25)
-       C0400 = Hot chocolate(N$15)
-       C0500 = Coke(N$15) 
-       C0600 = Dr. Pepper(N$10)
-       C0700 = Pepsi(N$10)
-       C0800 = TAB(N$10)
-       C0900 = Sprite(N$10)
+       M&M(N$10) = C0001
+	Maltesers(N$12) = C0002
+	Jelly Beans(N$7) = C0003
+	Sour worms(N$8) = C0004
+	Egg salad sandwich(N$35) = C0007
+	Pie(N$25) = C0008
+	Burger(N$30) = C0009
+	Latte(N$25) = C0100
+	Tea(N$15) = C0200
+	Cappuccino(N$25) = C0300
+	Hot chocolate(N$15) = C0400
+	Coke(N$15) = C0500
+Dr. Pepper(N$10) = C0600
+	Pepsi(N$10) = C0700
+	TAB(N$10) = C0800
+	Sprite(N$10) = C0900
+	Sorry we could not help you = C2100
 
-3. Prompt user for selection 
-4. Get selection
+3. Prompt user for productcodeSelection 
+4. Get productcodeSelection
 for i = 0 to (n - 1) by 1 do
   if (ourStock [i] = userSelection) then
      set loc = i 
@@ -40,3 +48,4 @@ customerMenu ()
  end if
 endCase }
 5. End
+
