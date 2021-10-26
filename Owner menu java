@@ -1,4 +1,4 @@
-  public static void ownerMenu() {
+   public static void ownerMenu() {
 		    int verificationCode = 8162;
 			Scanner userInput = new Scanner(System.in);
 			System.out.println("Please enter verification code: ");
@@ -14,12 +14,12 @@
 				System.out.println("                                          ");
 			    System.out.println("Restock(2310)");
 			    System.out.println("Add new Item(2311)");
-			    System.out.println("Change price or name of item(2312)");
-			    System.out.println("cash in(2313)");
-			    System.out.println("cash out(2314)");
-			    System.out.println("print summary of items in stock(2315)");
-			    System.out.println("print out amount of cash in categories(2316)");
-			    System.out.println("print items that need restocking(2317)");
+			    System.out.println("Change price of item(2312)");
+			    System.out.println("Cash in(2313)");
+			    System.out.println("Cash out(2314)");
+			    System.out.println("Print summary of items in stock(2315)");
+			    System.out.println("Print out amount of cash in categories(2316)");
+			    System.out.println("Print items that need re-stocking(2317)");
 			    System.out.println("                                          ");
 			    
 				//*The admin is than prompted to enter the code for the preferred action
@@ -28,33 +28,49 @@
 				System.out.println("Enter code for perfered action: ");
 				int actionCode = actioInput.nextInt();
 				
+				//*Re-stock(2310)
 				if(actionCode == 2310) {
 					
-					System.out.println("Available products shown below: ");
-					
+					System.out.println("Available products and codes shown below: ");
+			        System.out.println("                                          ");
 					System.out.println(C0001);
-	                System.out.println(C0002);
-		            System.out.println(C0003);
-		            System.out.println(C0004);
-		            System.out.println(C0007);
-		            System.out.println(C8000);
-		            System.out.println(C9000);
-		            System.out.println(C0100);
-		            System.out.println(C0200);
-		            System.out.println(C0300);
-		            System.out.println(C0400);
-		            System.out.println(C0500);
-		            System.out.println(C0600);
-		            System.out.println(C0700);
-		            System.out.println(C1800);
-		            System.out.println(C1900);
+					System.out.println("                                          ");
+			        System.out.println(C0002);
+			        System.out.println("                                          ");
+			        System.out.println(C0003);
+			        System.out.println("                                          ");
+			        System.out.println(C0004);
+			        System.out.println("                                          ");
+			        System.out.println(C0007);
+			        System.out.println("                                          ");
+			        System.out.println(C8000);
+			        System.out.println("                                          ");
+			        System.out.println(C9000);
+			        System.out.println("                                          ");
+			        System.out.println(C0100);
+			        System.out.println("                                          ");
+			        System.out.println(C0200);
+			        System.out.println("                                          ");
+			        System.out.println(C0300);
+			        System.out.println("                                          ");
+			        System.out.println(C0400);
+			        System.out.println("                                          ");
+			        System.out.println(C0500);
+			        System.out.println("                                          ");
+			        System.out.println(C0600);
+			        System.out.println("                                          ");
+			        System.out.println(C0700);
+			        System.out.println("                                          ");
+			        System.out.println(C1800);
+			        System.out.println("                                          ");
+			        System.out.println(C1900);
 					
 					//*Space is added in between to make it easier to read the prompt from the console
 					
 					System.out.println("                                          ");
 					System.out.println("                                          ");
 
-				System.out.println("Enter the name and price of item (As shown above) to be re-stocked and the amount you want to add seperated by a single SPACE: "); 
+				System.out.println("Enter the name and code of item (As shown above) to be re-stocked and the amount you want to add(+) seperated by a single SPACE: "); 
 				Scanner userInputForRestocking = new Scanner(System.in);
 				String ItemtoRestock1 = userInputForRestocking.nextLine();
 				int ItemtoRestockParts = ItemtoRestock1.indexOf(" ");
@@ -67,199 +83,234 @@
 				//* We wrote a nested case statement to increment the items counter based on the admins inputs 
 				
 				switch(ItemtoRestock1) {
-				   case  "m&m(n$10.00)(c0001)":
+				   case  "m&m(c0001)":
 					   C0001count = C0001count + amountToAdd;
 					   System.out.println(C0001count);
 				    break;
-				   case "maltesers(n$12.00)(c0002)":
+				   case "maltesers(c0002)":
 					   C0002count = C0002count + amountToAdd;
 				    break;
-				   case "jelly-beans(n$7.00)(c0003)":
+				   case "jelly-beans(c0003)":
 					   C0003count = C0003count + amountToAdd;
 					    break;
-				   case "sour-worms(n$8.00)(c0004)":
+				   case "sour-worms(c0004)":
 					   C0004count = C0004count + amountToAdd;
 					    break;
-				   case "egg-salad-sandwich(n$35.00)(c0007)":
+				   case "egg-salad-sandwich(c0007)":
 					   C0007count =  C0007count + amountToAdd;
 					    break;
-				   case "pie(n$25.00)(c8000)":
+				   case "pie(c8000)":
 					   C8000count = C8000count + amountToAdd;
 					    break;
-				   case "burger(n$30.00)(c9000)":
+				   case "burger(c9000)":
 					   C9000count = C9000count + amountToAdd;
 					    break;
-				   case "latte(n$25.00)(c0100)":
+				   case "latte(c0100)":
 					   C0100count = C0100count + amountToAdd;
 					    break;
-				   case "tea(n$15.00)(c0200)":
+				   case "tea(c0200)":
 					   C0200count = C0200count + amountToAdd;
 					    break;
-				   case "cappuccino(n$25.00)(c0300)":
+				   case "cappuccino(c0300)":
 					   C0300count = C0300count + amountToAdd;
 					    break;
-				   case "hot-chocolate(n$15.00)(c0400)":
+				   case "hot-chocolate(c0400)":
 					   C0400count = C0400count + amountToAdd;
 					    break;
-				   case "coke(n$15.00)(c0500)":
+				   case "coke(c0500)":
 					   C0500count = C0500count + amountToAdd;
 					    break;
-				   case "dr.pepper(n$10.00)(c0600)":
+				   case "dr.pepper(c0600)":
 					   C0600count = C0600count + amountToAdd;
 					    break;
-				   case "pepsi(n$10.00)(c0700)":
+				   case "pepsi(c0700)":
 					   C0700count = C0700count + amountToAdd;
 					    break;
-				   case "tab(n$10.00)(c1800)":
+				   case "tab(c1800)":
 					   C1800count = C1800count + amountToAdd;
 					    break;
-				   case "sprite(n$10.00)(c1900)":
+				   case "sprite(c1900)":
 					   C1900count = C1900count + amountToAdd;
 					    break;
 					default: System.out.println("Invalid entry! Please check your spelling and spacing." + "'" + ItemtoRestock + "'");    
 				    }
 				}
 				
-				
+				//*Add new Item(2311)
 				else if(actionCode == 2311) {
 					Scanner newIteminput = new Scanner(System.in); 
 					
-                    System.out.println("Available products shown below: ");
-					
+					System.out.println("Available products and codes shown below: ");
+			        System.out.println("                                          ");
 					System.out.println(C0001);
-	                System.out.println(C0002);
-		            System.out.println(C0003);
-		            System.out.println(C0004);
-		            System.out.println(C0007);
-		            System.out.println(C8000);
-		            System.out.println(C9000);
-		            System.out.println(C0100);
-		            System.out.println(C0200);
-		            System.out.println(C0300);
-		            System.out.println(C0400);
-		            System.out.println(C0500);
-		            System.out.println(C0600);
-		            System.out.println(C0700);
-		            System.out.println(C1800);
-		            System.out.println(C1900);
+					System.out.println("                                          ");
+			        System.out.println(C0002);
+			        System.out.println("                                          ");
+			        System.out.println(C0003);
+			        System.out.println("                                          ");
+			        System.out.println(C0004);
+			        System.out.println("                                          ");
+			        System.out.println(C0007);
+			        System.out.println("                                          ");
+			        System.out.println(C8000);
+			        System.out.println("                                          ");
+			        System.out.println(C9000);
+			        System.out.println("                                          ");
+			        System.out.println(C0100);
+			        System.out.println("                                          ");
+			        System.out.println(C0200);
+			        System.out.println("                                          ");
+			        System.out.println(C0300);
+			        System.out.println("                                          ");
+			        System.out.println(C0400);
+			        System.out.println("                                          ");
+			        System.out.println(C0500);
+			        System.out.println("                                          ");
+			        System.out.println(C0600);
+			        System.out.println("                                          ");
+			        System.out.println(C0700);
+			        System.out.println("                                          ");
+			        System.out.println(C1800);
+			        System.out.println("                                          ");
+			        System.out.println(C1900);
 					
 					//*Space is added in between to make it easier to read the prompt from the console
 					
 					System.out.println("                                          ");
 					System.out.println("                                          ");
 					
-					System.out.println("Enter name, price and code of new item according to the following naming convention e.g M&M(N$10)(C0001)");
+					System.out.println("Enter name and code of new item according to the following naming convention e.g M&M(C0001)");
 					String newItemAndCode = newIteminput.nextLine();
 					
 					System.out.println("You have successfully added " + newItemAndCode + " to the vending machine.");
 				}
+				//*Change price of item(2312)
 				else if(actionCode == 2312) {
 					
-                    System.out.println("Available products shown below: ");
-					
-					System.out.println(C0001);
-	                System.out.println(C0002);
-		            System.out.println(C0003);
-		            System.out.println(C0004);
-		            System.out.println(C0007);
-		            System.out.println(C8000);
-		            System.out.println(C9000);
-		            System.out.println(C0100);
-		            System.out.println(C0200);
-		            System.out.println(C0300);
-		            System.out.println(C0400);
-		            System.out.println(C0500);
-		            System.out.println(C0600);
-		            System.out.println(C0700);
-		            System.out.println(C1800);
-		            System.out.println(C1900);
+					System.out.println("Available products and codes shown below: ");
+			        System.out.println("                                          ");
+					System.out.println(C0001 + "  N$" + C0001Price);
+					System.out.println("                                          ");
+			        System.out.println(C0002 + "  N$" + C0002Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0003 + "  N$" + C0003Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0004 + "  N$" + C0004Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0007 + "  N$" + C0007Price);
+			        System.out.println("                                          ");
+			        System.out.println(C8000 + "  N$" + C8000Price);
+			        System.out.println("                                          ");
+			        System.out.println(C9000 + "  N$" + C9000Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0100 + "  N$" + C0100Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0200 + "  N$" + C0200Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0300 + "  N$" + C0300Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0400 + "  N$" + C0400Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0500 + "  N$" + C0500Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0600 + "  N$" + C0600Price);
+			        System.out.println("                                          ");
+			        System.out.println(C0700 + "  N$" + C0700Price);
+			        System.out.println("                                          ");
+			        System.out.println(C1800 + "  N$" + C1800Price);
+			        System.out.println("                                          ");
+			        System.out.println(C1900 + "  N$" + C1900Price);
 					
 					//*Space is added in between to make it easier to read the prompt from the console
 					
 					System.out.println("                                          ");
 					System.out.println("                                          ");
 					
-					System.out.println("Enter the name and price of the item you would like to alter and re-enter the item with a different price or name e.g M&M(N$10)(0001) M&M(N$12)(0001) NB:ITEM CODE SHOULD NOT CHANGE!!!: ");
+					System.out.println("Enter the code of the item who's price you would like to alter and enter the new price of the item seperated by a single space: e.g C0001 20.00 NB:ITEM CODE SHOULD NOT CHANGE!!!: ");
 					Scanner itemAlter = new Scanner(System.in); 
 					String fullentry = itemAlter.nextLine();
 					
 					//*The following lines of code split the users input into two separate string variables needed for switch statement
 					int fullentryParts = fullentry.indexOf(" ");
-					String oldNameAndPrice = fullentry.substring(0,fullentryParts);
-					String newNameAndPrice = fullentry.substring(fullentry.lastIndexOf(" ") + 1);				
+					String itemCode = fullentry.substring(0,fullentryParts);
+					String newPricePosition = fullentry.substring(fullentry.lastIndexOf(" ") + 1);
+					
+					double newPrice = Integer.parseInt(newPricePosition);
 					
 					
 					//*We created a switch statement to change a products price or name based on what the admins inputs
-					switch(oldNameAndPrice) {
+					switch(itemCode) {
 					
-					case "M&M(N$10.00)(C0001)":
-						C0001 = newNameAndPrice;
-						System.out.println("You have successfully changed M&M(N$10.00)(C0001) to " + newNameAndPrice);
+					   case "C0001":
+						C0001Price = newPrice;
+						System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 					    break;
-					   case "Maltesers(N$12.00)(C0002)":
-						   C0002 = newNameAndPrice;
-						   System.out.println("You have successfully changed Maltesers(N$12.00)(C0002) to " + newNameAndPrice);
+					   case "C0002":
+						   C0002Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 					    break;
-					   case "Jelly-beans(N$7.00)(C0003)":
-						   C0003 = newNameAndPrice;
-						   System.out.println("You have successfully changed Jelly-beans(N$7.00)(C0003) to " + newNameAndPrice);
+					   case "C0003":
+						   C0003Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Sour-worms(N$8.00)(C0004)":
-						   C0004 = newNameAndPrice;
-						   System.out.println("You have successfully changed Sour-worms(N$8.00)(C0004) to " + newNameAndPrice);
+					   case "C0004":
+						   C0004Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Egg-salad-sandwich(N$35.00)(C0007)":
-						   C0007 =  newNameAndPrice;
-						   System.out.println("You have successfully changed Egg-salad-sandwich(N$35.00)(C0007) to " + newNameAndPrice);
+					   case "C0007":
+						   C0007Price =  newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Pie(N$25.00)(C8000)":
-						   C8000 = newNameAndPrice;
-						   System.out.println("You have successfully changed Pie(N$25.00)(C8000) to " + newNameAndPrice);
+					   case "C8000":
+						   C8000Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Burger(N$30.00)(C9000)":
-						   C9000 = newNameAndPrice;
-						   System.out.println("You have successfully changed Burger(N$30.00)(C9000) to " + newNameAndPrice);
+					   case "C9000":
+						   C9000Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Latte(N$25.00)(C0100)":
-						   C0100 = newNameAndPrice;
-						   System.out.println("You have successfully changed Latte(N$25.00)(C0100) to " + newNameAndPrice);
+					   case "C0100":
+						   C0100Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Tea(N$15.00)(C0200)":
-						   C0200 = newNameAndPrice;
-						   System.out.println("You have successfully changed Tea(N$15.00)(C0200) to " + newNameAndPrice);
+					   case "C0200":
+						   C0200Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Cappuccino(N$25.00)(C0300)":
-						   C0300 = newNameAndPrice ;
-						   System.out.println("You have successfully changed Cappuccino(N$25.00)(C0300) to " + newNameAndPrice);
+					   case "C0300":
+						   C0300Price = newPrice ;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Hot-chocolate(N$15.00)(C0400)":
-						   C0400 = newNameAndPrice;
-						   System.out.println("You have successfully changed Hot-chocolate(N$15.00)(C0400) to " + newNameAndPrice);
+					   case "C0400":
+						   C0400Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Coke(N$15.00)(C0500)":
-						   C0500 = newNameAndPrice;
-						   System.out.println("You have successfully changed Coke(N$15.00)(C0500) to " + newNameAndPrice);
+					   case "C0500":
+						   C0500Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Dr.Pepper(N$10.00)(C0600)":
-						   C0600 = newNameAndPrice;
-						   System.out.println("You have successfully changed Dr.Pepper(N$10.00)(C0600) to " + newNameAndPrice);
+					   case "C0600":
+						   C0600Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Pepsi(N$10.00)(C0700)":
-						   C0700 = newNameAndPrice;
-						   System.out.println("You have successfully changed Pepsi(N$10.00)(C0700) to " + newNameAndPrice);
+					   case "C0700":
+						   C0700Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "TAB(N$10.00)(C1800)":
-						   C1800 = newNameAndPrice;
-						   System.out.println("You have successfully changed TAB(N$10.00)(C1800) to " + newNameAndPrice);
+					   case "C1800":
+						   C1800Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-					   case "Sprite(N$10.00)(C1900)":
-						   C1900 = newNameAndPrice;
-						   System.out.println("You have successfully changed Sprite(n$10.00)(C1900) to " + newNameAndPrice);
+					   case "C1900":
+						   C1900Price = newPrice;
+						   System.out.println("You have successfully changed thisitems pric to N$" + newPrice + "!");
 						    break;
-						default: System.out.println("Invalid entry! Please check your spelling and spacing." + "'" + oldNameAndPrice + "'" + " and " + "'" + newNameAndPrice + "'" );    	
+						default: System.out.println("Invalid entry! Please check your spelling and spacing." + "'" + itemCode + "'" + " and " + "'" + newPrice + "'" );    	
 					}
 				
-				} else if(actionCode == 2313) {
+				} 
+				//*Cash in(2313));
+				else if(actionCode == 2313) {
 					System.out.println("Available notes/coins: ");
 					System.out.println("                                          ");
 					System.out.println("N$0.05" + " = " +fiveCentCount); 
@@ -346,7 +397,9 @@
 						break;
 						default: System.out.println("Invalid entry!! Check entry and try again.");
 					}
-				}else if(actionCode == 2314) {
+				}
+				//*Cash out(2314)
+				else if(actionCode == 2314) {
 					Scanner cash0utInput = new Scanner(System.in); 
 					System.out.println("Enter the amount you want to cash out: ");
 					double cashOutAmountToDesplay = cash0utInput.nextDouble();
@@ -413,6 +466,7 @@
 					  
 					  System.out.println("There is a total of " + "N$" + new DecimalFormat("0.00").format(total) + " left in the vending machine.");
 				}
+				//*Print summary of items in stock(2315)
 				else if(actionCode == 2315) {
 					System.out.println("Summary of stock: ");
 					
@@ -449,6 +503,7 @@
 		            System.out.println(C1900 + ": " + C1900count + " in stock");
 		            
 				}
+				//*Print out amount of cash in categories(2316)
 				else if(actionCode == 2316) {
 					System.out.println("Amount of cash in categories: ");
 					
@@ -477,6 +532,7 @@
 					System.out.println("                                          ");
 					System.out.println("Total = " + "N$" + new DecimalFormat("0.00").format(total));
 				}
+				//*Print items that need re-stocking(2317)
 				else if(actionCode == 2317) {
                            if(C0001count < 25) {System.out.println(C0001 + "is less than required amount and needs to be restocked. Please do check summary of stock.");
                            System.out.println("                                          ");}
@@ -514,4 +570,4 @@
 				  
 				  }else {System.out.println("Invalid code!! Try again.");}}
 				
-			} //*END OF ownerMenu()
+			}  //*END OF ownerMenu()
