@@ -50,9 +50,7 @@ public static void customerMenu() {
 	    System.out.println("                                          ");
 	    
 	   Scanner CustomerInput = new Scanner(System.in);
-	   
-	   //*We set the maximum amount of items a customer can purchase to 5 as we assumed this is a reasonable amount
-	   
+	   	   
 	   System.out.println("Please enter number of items you would like to purchase: ");
 	   int number_Of_Items = CustomerInput.nextInt();
 	   
