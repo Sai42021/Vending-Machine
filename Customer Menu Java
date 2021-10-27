@@ -11,236 +11,288 @@ import java.util.Scanner;
 
 
 public static void customerMenu() {
-	   
-        System.out.println("Available products and codes shown below: ");
-        System.out.println("                                          ");
-		System.out.println(C0001 + "  N$" + C0001Price);
-		System.out.println("                                          ");
-        System.out.println(C0002 + "  N$" + C0002Price);
-        System.out.println("                                          ");
-        System.out.println(C0003 + "  N$" + C0003Price);
-        System.out.println("                                          ");
-        System.out.println(C0004 + "  N$" + C0004Price);
-        System.out.println("                                          ");
-        System.out.println(C0007 + "  N$" + C0007Price);
-        System.out.println("                                          ");
-        System.out.println(C8000 + "  N$" + C8000Price);
-        System.out.println("                                          ");
-        System.out.println(C9000 + "  N$" + C9000Price);
-        System.out.println("                                          ");
-        System.out.println(C0100 + "  N$" + C0100Price);
-        System.out.println("                                          ");
-        System.out.println(C0200 + "  N$" + C0200Price);
-        System.out.println("                                          ");
-        System.out.println(C0300 + "  N$" + C0300Price);
-        System.out.println("                                          ");
-        System.out.println(C0400 + "  N$" + C0400Price);
-        System.out.println("                                          ");
-        System.out.println(C0500 + "  N$" + C0500Price);
-        System.out.println("                                          ");
-        System.out.println(C0600 + "  N$" + C0600Price);
-        System.out.println("                                          ");
-        System.out.println(C0700 + "  N$" + C0700Price);
-        System.out.println("                                          ");
-        System.out.println(C1800 + "  N$" + C1800Price);
-        System.out.println("                                          ");
-        System.out.println(C1900 + "  N$" + C1900Price);
-        System.out.println("                                          ");
-        System.out.println("Exit(C2100)");
-	    System.out.println("                                          ");
 	    
 	   Scanner CustomerInput = new Scanner(System.in);
-	   	   
-	   System.out.println("Please enter number of items you would like to purchase: ");
-	   int number_Of_Items = CustomerInput.nextInt();
 	   
-	   if(number_Of_Items < 0) {System.out.println("Invalid amount entered! Please check your entry and try again.");}
+      System.out.println("Available products, codes and PRICES(N$) shown below: ");
 	   
-	   else {
-	   System.out.println("Enter cash amount N$: ");
+	   System.out.println("                                          ");
+	   System.out.println(C0001 + "_N$" + new DecimalFormat("0.00").format(C0001Price) );
+	   System.out.println("                                          ");
+       System.out.println(C0002 + "_N$" + new DecimalFormat("0.00").format(C0002Price));
+       System.out.println("                                          ");
+       System.out.println(C0003 + "_N$" + new DecimalFormat("0.00").format(C0003Price));
+       System.out.println("                                          ");
+       System.out.println(C0004 + "_N$" + new DecimalFormat("0.00").format(C0004Price));
+       System.out.println("                                          ");
+       System.out.println(C0007 + "_N$" + new DecimalFormat("0.00").format(C0007Price));
+       System.out.println("                                          ");
+       System.out.println(C8000 + "_N$" + new DecimalFormat("0.00").format(C8000Price));
+       System.out.println("                                          ");
+       System.out.println(C9000 + "_N$" + new DecimalFormat("0.00").format(C9000Price));
+       System.out.println("                                          ");
+       System.out.println(C0100 + "_N$" + new DecimalFormat("0.00").format(C0100Price));
+       System.out.println("                                          ");
+       System.out.println(C0200 + "_N$" + new DecimalFormat("0.00").format(C0200Price));
+       System.out.println("                                          ");
+       System.out.println(C0300 + "_N$" + new DecimalFormat("0.00").format(C0300Price));
+       System.out.println("                                          ");
+       System.out.println(C0400 + "_N$" + new DecimalFormat("0.00").format(C0400Price));
+       System.out.println("                                          ");
+       System.out.println(C0500 + "_N$" + new DecimalFormat("0.00").format(C0500Price));
+       System.out.println("                                          ");
+       System.out.println(C0600 + "_N$" + new DecimalFormat("0.00").format(C0600Price));
+       System.out.println("                                          ");
+       System.out.println(C0700 + "_N$" + new DecimalFormat("0.00").format(C0700Price));
+       System.out.println("                                          ");
+       System.out.println(C1800 + "_N$" + new DecimalFormat("0.00").format(C1800Price));
+       System.out.println("                                          ");
+       System.out.println(C1900 + "_N$" + new DecimalFormat("0.00").format(C1900Price));
+	   System.out.println("                                          ");
+
+	   System.out.println("Please enter the quantity of the item(s) you would like to purchase NB: ENTER (0) FOR THE THE ITEMS YOUR NOT INTERESTED IN!");
+	   System.out.println("                                          ");
 	   
-	   double amountTendered = CustomerInput.nextDouble();
-	   double Amount_entered = amountTendered;
-	  
-		   int promptCount = 0;
-		   
-		   while(promptCount < number_Of_Items) {
-			   Scanner CustomerSelect = new Scanner(System.in);
-			   System.out.println("Please enter product code for the product you would like to purchase: ");
-			   String Customer_selection = CustomerSelect.nextLine();
-			   Customer_selection = Customer_selection.toUpperCase();
+	   System.out.println("Enter quantity of " + C0001 + "_" + "N$"+ new DecimalFormat("0.00").format(C0001Price) + ": ");
+	   int QTY_Of_C0001 = CustomerInput.nextInt();
+	   C0001count = C0001count - QTY_Of_C0001;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0002 + "_" + "N$"+ new DecimalFormat("0.00").format(C0002Price) + ": ");
+	   int QTY_Of_C0002 = CustomerInput.nextInt();
+	   C0002count = C0002count - QTY_Of_C0002;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0003 + "_" + "N$"+ new DecimalFormat("0.00").format(C0003Price) + ": ");
+	   int QTY_Of_C0003 = CustomerInput.nextInt();
+	   C0003count = C0003count - QTY_Of_C0003;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0004 + "_" + "N$"+ new DecimalFormat("0.00").format(C0004Price) + ": ");
+	   int QTY_Of_C0004 = CustomerInput.nextInt();
+	   C0004count = C0004count - QTY_Of_C0004;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0007 + "_" + "N$"+ new DecimalFormat("0.00").format(C0007Price) + ": ");
+	   int QTY_Of_C0007 = CustomerInput.nextInt();
+	   C0007count = C0007count - QTY_Of_C0007;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C8000 + "_" + "N$"+ new DecimalFormat("0.00").format(C8000Price) + ": ");
+	   int QTY_Of_C8000 = CustomerInput.nextInt();
+	   C8000count = C8000count - QTY_Of_C8000;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C9000 + "_" + "N$"+ new DecimalFormat("0.00").format(C9000Price) + ": ");
+	   int QTY_Of_C9000 = CustomerInput.nextInt();
+	   C9000count = C9000count - QTY_Of_C9000;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0100 + "_" + "N$"+ new DecimalFormat("0.00").format(C0100Price) + ": ");
+	   int QTY_Of_C0100 = CustomerInput.nextInt();
+	   C0100count = C0100count - QTY_Of_C0100;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0200 + "_" + "N$"+ new DecimalFormat("0.00").format(C0200Price) + ": ");
+	   int QTY_Of_C0200 = CustomerInput.nextInt();
+	   C0200count = C0200count - QTY_Of_C0200;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0300 + "_" + "N$"+ new DecimalFormat("0.00").format(C0300Price) + ": ");
+	   int QTY_Of_C0300 = CustomerInput.nextInt();
+	   C0300count = C0300count - QTY_Of_C0300;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0400 + "_" + "N$"+ new DecimalFormat("0.00").format(C0400Price) + ": ");
+	   int QTY_Of_C0400 = CustomerInput.nextInt();
+	   C0400count = C0400count - QTY_Of_C0400;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0500 + "_" + "N$"+ new DecimalFormat("0.00").format(C0500Price) + ": ");
+	   int QTY_Of_C0500= CustomerInput.nextInt();
+	   C0500count = C0500count - QTY_Of_C0500;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0600 + "_" + "N$"+ new DecimalFormat("0.00").format(C0600Price) + ": ");
+	   int QTY_Of_C0600 = CustomerInput.nextInt();
+	   C0600count = C0600count - QTY_Of_C0600;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C0700 + "_" + "N$"+ new DecimalFormat("0.00").format(C0700Price) + ": ");
+	   int QTY_Of_C0700 = CustomerInput.nextInt();
+	   C0700count = C0700count - QTY_Of_C0700;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C1800 + "_" + "N$"+ new DecimalFormat("0.00").format(C1800Price) + ": ");
+	   int QTY_Of_C1800 = CustomerInput.nextInt();
+	   C1800count = C1800count - QTY_Of_C1800;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter quantity of " + C1900 + "_" + "N$"+ new DecimalFormat("0.00").format(C1900Price) + ": ");
+	   int QTY_Of_C1900 = CustomerInput.nextInt();
+	   C1900count = C1800count - QTY_Of_C1800;
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Exit(C2100)");
+	   System.out.println("                                          ");
+	   
+	   
+	   double totalCost1 = C0001Price * QTY_Of_C0001;
+	   double totalCost2 = C0002Price * QTY_Of_C0002;
+	   double totalCost3 = C0003Price * QTY_Of_C0003;
+	   double totalCost4 = C0004Price * QTY_Of_C0004;
+	   double totalCost7 = C0007Price * QTY_Of_C0007;
+	   double totalCost8 = C8000Price * QTY_Of_C8000;
+	   double totalCost9 = C9000Price * QTY_Of_C9000;
+	   double totalCost10 = C0100Price * QTY_Of_C0100;
+	   double totalCost11 = C0200Price * QTY_Of_C0200;
+	   double totalCost12 = C0300Price * QTY_Of_C0300;
+	   double totalCost13 = C0400Price * QTY_Of_C0400;
+	   double totalCost14 = C0500Price * QTY_Of_C0500;
+	   double totalCost15 = C0600Price * QTY_Of_C0600;
+	   double totalCost16 = C0700Price * QTY_Of_C0700;
+	   double totalCost17 = C1800Price * QTY_Of_C1800;
+	   double totalCost18 = C1900Price * QTY_Of_C1900;
+	   
+	   double Actual_Total_Cost = (totalCost1 + totalCost2 + totalCost3 + totalCost4 + totalCost7 +
+			                       totalCost8 + totalCost9 + totalCost10 + totalCost11 + totalCost12 + 
+			                       totalCost13 + totalCost14 + totalCost15 + totalCost16 + totalCost17 + totalCost18);
+	   
+	   System.out.println("Your total is N$" + new DecimalFormat("0.00").format(Actual_Total_Cost));
+	   System.out.println("                                          ");
+	   
+	   System.out.println("Enter cash amount: ");
+	   double Cash_Amount = CustomerInput.nextDouble();
+	   
+	   double Change = Cash_Amount - Actual_Total_Cost;
+	   
+	   if(Cash_Amount >= Actual_Total_Cost && Change > 0) {
+	   
+	    double real_change = Change;
+		
+		int two_hundred_dollars = (int) Change / 200;
+		Change = Change % 200; 
+		
+		int one_hundred_dollars = (int) Change / 100;
+		Change = Change % 100; 
+		
+		int fifty_dollars = (int) Change / 50;
+		Change = Change % 50; 
+		
+		int thirty_dollars = (int) Change / 30;
+		Change = Change % 30; 
+		
+		int twenty_dollars = (int) Change / 20;
+		Change = Change % 20; 
+		
+		int ten_dollars = (int) Change / 10;
+		Change = Change % 10;
+		
+		int five_dollars = (int) Change / 5;
+		Change = Change % 5;
+		
+		int one_dollar = (int)Change / 1;
+		Change = Change % 1;
+		
+		double fifty_cent = Change / 0.5;
+		Change = Change % 0.5;
+		
+		double ten_cents = (int) Change % 0.10;
+		Change = Change % 0.10;
+		
+		double five_cents = (int) Change; 
+		
+		  fiveCentCount = (int) (100 - five_cents); 
+		  tenCentCount = (int) (100 - ten_cents);
+		  fiftyCentCount = (int) (100 - fifty_cent);
+		  oneDollarCount = 500 - one_dollar;
+		  fiveDollarCount = 100 - five_dollars;
+		  tenDollarCount = 100 - ten_dollars;
+		  twentyDollarCount = 100 - twenty_dollars;
+		  thirtyDollarCount = 100 - thirty_dollars;
+		  fiftyDollarCount = 50 - fifty_dollars;
+		  oneHundredDollarCount = 20 - one_hundred_dollars;
+		  twoHundredDollarCount = 20 - two_hundred_dollars;
+		  total = total - Change;
+		  
+		  System.out.println("                                                                             ");
+		  System.out.println("Your change is N$: " + new DecimalFormat("0.00").format(real_change));
+		  
+		  System.out.println("                                                                             ");
+		  System.out.println("                                                                             ");
+		  		  
+
+			  System.out.println("**                                            X AVENDERS VENDING MACHINE                                           **");
+			  System.out.println("                                          ");
+			  System.out.println("*********************************************************************************************************************");
 			  
-			   switch(Customer_selection) {
+			  System.out.println("NAME               PRICE              QTY              TOTAL");
+			   System.out.println(C0001 + "           " + "N$"+ new DecimalFormat("0.00").format(C0001Price) + "               "  + QTY_Of_C0001 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost1) );
+			   System.out.println("                                          ");
 			   
-			   case "C0001":
-				   C0001count = C0001count - 1;
-					double change1 = amountTendered - C0001Price;
-					double Realchange1 = change1;
-					System.out.println("You have successfully purchased " + C0001 + ".");
-					System.out.println("                                          ");
-			        System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange1)); 
-			        System.out.println("                                          ");
-					break;
-					
-			   case "C0002":
-				   C0002count = C0002count - 1;
-					double change2 = amountTendered - C0002Price;
-					double Realchange2 = change2;
-					System.out.println("You have successfully purchased " + C0002 + ".");
-			         System.out.println("                                          ");
-			         System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange2)); 
-				        System.out.println("                                          ");
-			         
-				    break;
-					 
-			   case "C0003":
-				    C0003count = C0003count - 1;
-					double change3 = amountTendered - C0002Price;
-					double Realchange3 = change3;
-					System.out.println("You have successfully purchased " + C0003 + ".");
-				    System.out.println("                                          ");
-				    System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange3)); 
-			        System.out.println("                                          ");
-					break;
-					 
-				case "C0004":
-					C0004count = C0004count - 1;
-					double change4 = amountTendered - C0002Price;
-					double Realchange4 = change4;
-					System.out.println("You have successfully purchased " + C0004 + ".");
-					System.out.println("                                          ");
-					System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange4)); 
-			        System.out.println("                                          ");
-					break;
-					 
-				case "C0007":
-					C0007count = C0007count - 1;
-					double change7 = amountTendered - C0002Price;
-					double Realchange7 = change7;
-					System.out.println("You have successfully purchased " + C0007 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange7)); 
-				        System.out.println("                                          ");
-					break;
-					 
-				case "C8000":
-					C8000count = C8000count - 1;
-					double change8 = amountTendered - C8000Price;
-					double Realchange8 = change8;
-					System.out.println("You have successfully purchased " + C8000 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange8)); 
-				        System.out.println("                                          ");
-					break;
-					 
-				case "C9000":
-					C9000count = C9000count - 1;
-					double change9 = amountTendered - C9000Price;
-					double Realchange9 = change9;
-					System.out.println("You have successfully purchased " + C9000 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange9)); 
-				        System.out.println("                                          ");
-					break;
-					 
-				case "C0100":
-					C0100count = C0100count - 1;
-					double change10 = amountTendered - C0100Price;
-					double Realchange10 = change10;
-					System.out.println("You have successfully purchased " + C0100 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange10)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C0200":
-					C0200count = C0200count - 1;
-					double change11 = amountTendered - C0200Price;
-					double Realchange11 = change11;
-					System.out.println("You have successfully purchased " + C0200 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange11)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C0300":
-					C0300count = C0300count - 1;
-					double change12 = amountTendered - C0300Price;
-					double Realchange12 = change12;
-					System.out.println("You have successfully purchased " + C0300 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange12)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C0400":
-					C0400count = C0400count - 1;
-					double change13 = amountTendered - C0400Price;
-					double Realchange13 = change13;
-					System.out.println("You have successfully purchased " + C0400 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange13)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C0500":
-					C0500count = C0500count - 1;
-					double change14 = amountTendered - C0500Price;
-					double Realchange14 = change14;
-					System.out.println("You have successfully purchased " + C0500 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange14)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C0600":
-					C0600count = C0600count - 1;
-					double change15 = amountTendered - C0600Price;
-					double Realchange15 = change15;
-					System.out.println("You have successfully purchased " + C0600 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange15)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C0700":
-					C0700count = C0700count - 1;
-					double change16 = amountTendered - C0700Price;
-					double Realchange16 = change16;
-					System.out.println("You have successfully purchased " + C0700 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange16)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C1800":
-					C1800count = C1800count - 1;
-					double change17 = amountTendered - C1800Price;
-					double Realchange17 = change17;
-					System.out.println("You have successfully purchased " + C1800 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange17)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C1900":
-					C1900count = C1900count - 1;
-					double change18 = amountTendered - C1900Price;
-					double Realchange18 = change18;
-					System.out.println("You have successfully purchased " + C1900 + ".");
-					 System.out.println("                                          ");
-					 System.out.println("Your change is N$" + new DecimalFormat("0.00").format(Realchange18)); 
-				        System.out.println("                                          ");
-					 break;
-					 
-				case "C2100":
-					System.out.println(C2100);
-				default: System.out.println("Invalid entry!!"); 
-			        
-			       } 
-			       promptCount++;
-		   
-	       }
-		   
+			   System.out.println(C0002 + "               " + "N$"+ new DecimalFormat("0.00").format(C0002Price) + "               "  + QTY_Of_C0002 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost2) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0003 + "               " + "N$"+ new DecimalFormat("0.00").format(C0003Price) + "               "  + QTY_Of_C0003 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost3) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0004 + "               " + "N$"+ new DecimalFormat("0.00").format(C0004Price) + "               "  + QTY_Of_C0004 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost4) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0007 + "               " + "N$"+ new DecimalFormat("0.00").format(C0007Price) + "               "  + QTY_Of_C0007 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost7) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C8000 + "               " + "N$"+ new DecimalFormat("0.00").format(C8000Price) + "               "  + QTY_Of_C8000 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost8) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C9000 + "               " + "N$"+ new DecimalFormat("0.00").format(C9000Price) + "               "  + QTY_Of_C9000 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost9) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0100 + "               " + "N$"+ new DecimalFormat("0.00").format(C0100Price) + "               "  + QTY_Of_C0100 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost10) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0200 + "               " + "N$"+ new DecimalFormat("0.00").format(C0200Price) + "               "  + QTY_Of_C0200 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost11) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0300 + "               " + "N$"+ new DecimalFormat("0.00").format(C0300Price) + "               "  + QTY_Of_C0300 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost12) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0400 + "               " + "N$"+ new DecimalFormat("0.00").format(C0400Price) + "               "  + QTY_Of_C0400 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost13) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0500 + "               " + "N$"+ new DecimalFormat("0.00").format(C0500Price) + "               "  + QTY_Of_C0500 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost14) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0600 + "               " + "N$"+ new DecimalFormat("0.00").format(C0600Price) + "               "  + QTY_Of_C0600 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost15) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C0700 + "               " + "N$"+ new DecimalFormat("0.00").format(C0700Price) + "               "  + QTY_Of_C0700 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost16) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C1800 + "               " + "N$"+ new DecimalFormat("0.00").format(C1800Price) + "               "  + QTY_Of_C1800 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost17) );
+			   System.out.println("                                          ");
+			   
+			   System.out.println(C1900 + "               " + "N$"+ new DecimalFormat("0.00").format(C1900Price) + "               "  + QTY_Of_C1900 +  "               "  + "N$"+ new DecimalFormat("0.00").format(totalCost18) );
+			   System.out.println("                                          ");
+			   System.out.println("--------------------------------------------------------------------------------------------------------------------");
+			   System.out.println("                                                                             ");
+			   System.out.println("Total                                                                                   " + "N$" +  new DecimalFormat("0.00").format(Actual_Total_Cost));
+			   System.out.println("                                                                             ");
+			   System.out.println("Tendered                                                                                " + "N$" +  new DecimalFormat("0.00").format(Cash_Amount));
+			   System.out.println("                                                                             ");
+			   System.out.println("Change                                                                                  " + "N$" +  new DecimalFormat("0.00").format(real_change));
+			   System.out.println("                                                                             ");
+			   System.out.println("Change disbursed as follows: " + two_hundred_dollars + " x N$ 200; " + one_hundred_dollars 
+						  + " x N$ 100; " + fifty_dollars + " x N$ 50; " + thirty_dollars 
+						  + " x N$ 30; " + twenty_dollars + " x N$ 20; " + ten_dollars + " x N$10; " 
+						  + five_dollars +" x N$5; " + one_dollar + " x N$1; " 
+						  +new DecimalFormat("0").format(fifty_cent)  + " x 50c; " + 
+						  new DecimalFormat("0").format(ten_cents) + " x 10c; " + 
+						  new DecimalFormat("0").format(five_cents) + " x 5c; " );
+				  System.out.println("                                                                             ");
+				  System.out.println("*****************************************************************************************************************");
+				  System.out.println("Thank you. Come Again!");
+
 	   }
+	   else {System.out.println("The amount you have entered is not sufficiant for this transaction :(");}
 	}
