@@ -213,7 +213,10 @@ public static void customerMenu() {
 		  fiftyDollarCount = 50 - fifty_dollars;
 		  oneHundredDollarCount = 20 - one_hundred_dollars;
 		  twoHundredDollarCount = 20 - two_hundred_dollars;
-		  total = total - Change;
+		   //*Add the amount the customer entered to keep track of profit
+		  total = total + Cash_Amount;
+		  //*Subtract change from total 
+		  total = total - real_change;
 		  
 		  System.out.println("                                                                             ");
 		  System.out.println("Your change is N$: " + new DecimalFormat("0.00").format(real_change));
