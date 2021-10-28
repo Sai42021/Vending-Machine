@@ -18,93 +18,76 @@ customerMenu() {
        Display (C0700 + "_N$" + new DecimalFormat("0.00").format(C0700Price))
        Display (C1800 + "_N$" + new DecimalFormat("0.00").format(C1800Price))
        Display (C1900 + "_N$" + new DecimalFormat("0.00").format(C1900Price))
-	     Display ("Please enter the quantity of the item(s) you would like to purchase NB: ENTER (0) FOR THE THE ITEMS YOUR NOT INTERESTED IN!")
-	   
-	   
+ Display ("Please enter the quantity of the item(s) you would like to purchase NB: ENTER (0) FOR THE THE ITEMS YOUR NOT INTERESTED IN!")
+	 	   
   Display ("Enter quantity of " + C0001 + "_" + "N$"+ new DecimalFormat("0.00").format(C0001Price) + ": ")
-	   Declare int QTY_Of_C0001 
+	   Declare Declare int QTY_Of_C0001 
 	   C0001count = C0001count - QTY_Of_C0001
 	   
 	   
 Display ("Enter quantity of " + C0002 + "_" + "N$"+ new DecimalFormat("0.00").format(C0002Price) + ": ")
-	   Declare int QTY_Of_C0002 
+	   Declare Declare int QTY_Of_C0002 
 	   C0002count = C0002count - QTY_Of_C0002
-	   
-	   
+	  
  Display ("Enter quantity of " + C0003 + "_" + "N$"+ new DecimalFormat("0.00").format(C0003Price) + ": ")
-	  Declare int QTY_Of_C0003 = 
-	   C0003count = C0003count - QTY_Of_C0003
-	   
-	   
-	   Display ("Enter quantity of " + C0004 + "_" + "N$"+ new DecimalFormat("0.00").format(C0004Price) + ": ")
-	   Declare int QTY_Of_C0004 
+	  Declare Declare int QTY_Of_C0003 = 
+	   C0003count = C0003count - QTY_Of_C0003   
+   
+Display ("Enter quantity of " + C0004 + "_" + "N$"+ new DecimalFormat("0.00").format(C0004Price) + ": ")
+	   Declare Declare int QTY_Of_C0004 
 	   C0004count = C0004count - QTY_Of_C0004
-	   
-	   
-	   Display ("Enter quantity of " + C0007 + "_" + "N$"+ new DecimalFormat("0.00").format(C0007Price) + ": ")
-	   int QTY_Of_C0007 = 
+	   	   
+ Display ("Enter quantity of " + C0007 + "_" + "N$"+ new DecimalFormat("0.00").format(C0007Price) + ": ")
+	   Declare int QTY_Of_C0007 = 
 	   C0007count = C0007count - QTY_Of_C0007
 	   
-	   
-	   Display ("Enter quantity of " + C8000 + "_" + "N$"+ new DecimalFormat("0.00").format(C8000Price) + ": ")
-	   int QTY_Of_C8000 = 
+  Display ("Enter quantity of " + C8000 + "_" + "N$"+ new DecimalFormat("0.00").format(C8000Price) + ": ")
+	   Declare int QTY_Of_C8000 = 
 	   C8000count = C8000count - QTY_Of_C8000
-	   
-	   
-	   Display ("Enter quantity of " + C9000 + "_" + "N$"+ new DecimalFormat("0.00").format(C9000Price) + ": ")
-	   int QTY_Of_C9000 = 
+	    
+Display ("Enter quantity of " + C9000 + "_" + "N$"+ new DecimalFormat("0.00").format(C9000Price) + ": ")
+	   Declare int QTY_Of_C9000 = 
 	   C9000count = C9000count - QTY_Of_C9000
 	   
 	   
-	   Display ("Enter quantity of " + C0100 + "_" + "N$"+ new DecimalFormat("0.00").format(C0100Price) + ": ")
-	   int QTY_Of_C0100 = 
+ Display ("Enter quantity of " + C0100 + "_" + "N$"+ new DecimalFormat("0.00").format(C0100Price) + ": ")
+	   Declare int QTY_Of_C0100 = 
 	   C0100count = C0100count - QTY_Of_C0100
 	   
-	   
-	   Display ("Enter quantity of " + C0200 + "_" + "N$"+ new DecimalFormat("0.00").format(C0200Price) + ": ")
-	   int QTY_Of_C0200 = 
+ Display ("Enter quantity of " + C0200 + "_" + "N$"+ new DecimalFormat("0.00").format(C0200Price) + ": ")
+	   Declare int QTY_Of_C0200 = 
 	   C0200count = C0200count - QTY_Of_C0200
 	   
-	   
-	   Display ("Enter quantity of " + C0300 + "_" + "N$"+ new DecimalFormat("0.00").format(C0300Price) + ": ")
-	   int QTY_Of_C0300 = 
+ Display ("Enter quantity of " + C0300 + "_" + "N$"+ new DecimalFormat("0.00").format(C0300Price) + ": ")
+	   Declare int QTY_Of_C0300 = 
 	   C0300count = C0300count - QTY_Of_C0300
 	   
-	   
-	   Display ("Enter quantity of " + C0400 + "_" + "N$"+ new DecimalFormat("0.00").format(C0400Price) + ": ")
-	   int QTY_Of_C0400 = 
+   Display ("Enter quantity of " + C0400 + "_" + "N$"+ new DecimalFormat("0.00").format(C0400Price) + ": ")
+	   Declare int QTY_Of_C0400 = 
 	   C0400count = C0400count - QTY_Of_C0400
-	   
-	   
-	   Display ("Enter quantity of " + C0500 + "_" + "N$"+ new DecimalFormat("0.00").format(C0500Price) + ": ")
-	   int QTY_Of_C0500= 
+	  
+ Display ("Enter quantity of " + C0500 + "_" + "N$"+ new DecimalFormat("0.00").format(C0500Price) + ": ")
+	   Declare int QTY_Of_C0500= 
 	   C0500count = C0500count - QTY_Of_C0500
-	   
-	   
-	   Display ("Enter quantity of " + C0600 + "_" + "N$"+ new DecimalFormat("0.00").format(C0600Price) + ": ")
-	   int QTY_Of_C0600 = 
+   
+Display ("Enter quantity of " + C0600 + "_" + "N$"+ new DecimalFormat("0.00").format(C0600Price) + ": ")
+	   Declare int QTY_Of_C0600 = 
 	   C0600count = C0600count - QTY_Of_C0600
 	   
 	   
-	   Display ("Enter quantity of " + C0700 + "_" + "N$"+ new DecimalFormat("0.00").format(C0700Price) + ": ")
-	   int QTY_Of_C0700 = 
+Display ("Enter quantity of " + C0700 + "_" + "N$"+ new DecimalFormat("0.00").format(C0700Price) + ": ")
+	   Declare int QTY_Of_C0700 = 
 	   C0700count = C0700count - QTY_Of_C0700
+	     
+ Display ("Enter quantity of " + C1800 + "_" + "N$"+ new DecimalFormat("0.00").format(C1800Price) + ": ")
+	   Declare int QTY_Of_C1800 = 
+	   C1800count = C1800count - QTY_Of_C1800 
 	   
-	   
-	   Display ("Enter quantity of " + C1800 + "_" + "N$"+ new DecimalFormat("0.00").format(C1800Price) + ": ")
-	   int QTY_Of_C1800 = 
-	   C1800count = C1800count - QTY_Of_C1800
-	   
-	   
-	   Display ("Enter quantity of " + C1900 + "_" + "N$"+ new DecimalFormat("0.00").format(C1900Price) + ": ")
-	   int QTY_Of_C1900 = 
-	   C1900count = C1800count - QTY_Of_C1800
-	   
-	   
-	   Display ("Exit(C2100)")
-	   
-	   
-	   
+Display ("Enter quantity of " + C1900 + "_" + "N$"+ new DecimalFormat("0.00").format(C1900Price) + ": ")
+	   Declare int QTY_Of_C1900 = 
+	   C1900count = C1800count - QTY_Of_C1800 
+ Display ("Exit(C2100)")
+  
 	   double totalCost1 = C0001Price * QTY_Of_C0001
 	   double totalCost2 = C0002Price * QTY_Of_C0002
 	   double totalCost3 = C0003Price * QTY_Of_C0003
@@ -124,10 +107,9 @@ Display ("Enter quantity of " + C0002 + "_" + "N$"+ new DecimalFormat("0.00").fo
 	   
 	   double Actual_Total_Cost = (totalCost1 + totalCost2 + totalCost3 + totalCost4 + totalCost7 +
 			                       totalCost8 + totalCost9 + totalCost10 + totalCost11 + totalCost12 + 
-			                       totalCost13 + totalCost14 + totalCost15 + totalCost16 + totalCost17 + totalCost18)
-	   
-	   Display ("Your total is N$" + new DecimalFormat("0.00").format(Actual_Total_Cost))
-	   Display ("Enter cash amount: ")
+			                       totalCost13 + totalCost14 + totalCost15 + totalCost16 + totalCost17 + totalCost18)   
+Display ("Your total is N$" + new DecimalFormat("0.00").format(Actual_Total_Cost))
+Display ("Enter cash amount: ")
 	   double Cash_Amount = CustomerInput.nextDouble()
 	   
 	   double Change = Cash_Amount - Actual_Total_Cost
@@ -234,51 +216,40 @@ Display ("Enter quantity of " + C0002 + "_" + "N$"+ new DecimalFormat("0.00").fo
 			  //*The code above increments each monetary counter based on how much money is entered by the user
 		  Display ("Your change is N$: " + new DecimalFormat("0.00").format(real_change))
 		  		  
-              //*Receipt layout 
-	Display ("**                                       X AVENDERS VENDING MACHINE X                                    **")
+          //*Receipt layout 
+Display ("**                                       X AVENDERS VENDING MACHINE X                                    **")
 	
-			  Display ("***********************************************************************************************************")
+  Display ("***********************************************************************************************************")
 			  
-			   Display (String.format("%-30s%s" , "NAME", "PRICE") + "                 " + String.format("%-30s%s", "QTY", "TOTAL" ))
-			   Display (String.format("%-30s%s" ,C0001, "N$"+ new DecimalFormat("0.00").format(C0001Price)) + "               " + String.format("%-30s%s", QTY_Of_C0001, "N$"+ new DecimalFormat("0.00").format(totalCost1)) )
+  Display (String.format("%-30s%s" , "NAME", "PRICE") + "                 " + String.format("%-30s%s", "QTY", "TOTAL" ))
+
+Display (String.format("%-30s%s" ,C0001, "N$"+ new DecimalFormat("0.00").format(C0001Price)) + "               " + String.format("%-30s%s", QTY_Of_C0001, "N$"+ new DecimalFormat("0.00").format(totalCost1)) )			   
+ Display (String.format("%-30s%s" ,C0002, "N$"+ new DecimalFormat("0.00").format(C0002Price)) + "               " + String.format("%-30s%s", QTY_Of_C0002, "N$"+ new DecimalFormat("0.00").format(totalCost2)) )
+
+Display (String.format("%-30s%s" ,C0003, "N$"+ new DecimalFormat("0.00").format(C0003Price)) + "                " + String.format("%-30s%s", QTY_Of_C0003, "N$"+ new DecimalFormat("0.00").format(totalCost3)) )
+
+Display (String.format("%-30s%s" ,C0004, "N$"+ new DecimalFormat("0.00").format(C0004Price)) + "                " + String.format("%-30s%s", QTY_Of_C0004, "N$"+ new DecimalFormat("0.00").format(totalCost4)) )
+
+Display (String.format("%-30s%s" ,C0007, "N$"+ new DecimalFormat("0.00").format(C0007Price)) + "               " + String.format("%-30s%s", QTY_Of_C0007, "N$"+ new DecimalFormat("0.00").format(totalCost7)) )
 			   
 			   
-			   Display (String.format("%-30s%s" ,C0002, "N$"+ new DecimalFormat("0.00").format(C0002Price)) + "               " + String.format("%-30s%s", QTY_Of_C0002, "N$"+ new DecimalFormat("0.00").format(totalCost2)) )
+Display (String.format("%-30s%s" ,C8000, "N$"+ new DecimalFormat("0.00").format(C8000Price)) + "               " + String.format("%-30s%s", QTY_Of_C8000, "N$"+ new DecimalFormat("0.00").format(totalCost8)) )
+ 
+Display (String.format("%-30s%s" ,C9000, "N$"+ new DecimalFormat("0.00").format(C9000Price)) + "               " + String.format("%-30s%s", QTY_Of_C9000, "N$"+ new DecimalFormat("0.00").format(totalCost9)) )
+
+Display (String.format("%-30s%s" ,C0100, "N$"+ new DecimalFormat("0.00").format(C0100Price)) + "               " + String.format("%-30s%s", QTY_Of_C0100, "N$"+ new DecimalFormat("0.00").format(totalCost10)) )
+
+Display (String.format("%-30s%s" ,C0200, "N$"+ new DecimalFormat("0.00").format(C0200Price)) + "               " + String.format("%-30s%s", QTY_Of_C0200, "N$"+ new DecimalFormat("0.00").format(totalCost11)) )
 			   
+Display (String.format("%-30s%s" ,C0300, "N$"+ new DecimalFormat("0.00").format(C0300Price)) + "               " + String.format("%-30s%s", QTY_Of_C0300, "N$"+ new DecimalFormat("0.00").format(totalCost12)) )
 			   
-			   Display (String.format("%-30s%s" ,C0003, "N$"+ new DecimalFormat("0.00").format(C0003Price)) + "                " + String.format("%-30s%s", QTY_Of_C0003, "N$"+ new DecimalFormat("0.00").format(totalCost3)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C0004, "N$"+ new DecimalFormat("0.00").format(C0004Price)) + "                " + String.format("%-30s%s", QTY_Of_C0004, "N$"+ new DecimalFormat("0.00").format(totalCost4)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C0007, "N$"+ new DecimalFormat("0.00").format(C0007Price)) + "               " + String.format("%-30s%s", QTY_Of_C0007, "N$"+ new DecimalFormat("0.00").format(totalCost7)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C8000, "N$"+ new DecimalFormat("0.00").format(C8000Price)) + "               " + String.format("%-30s%s", QTY_Of_C8000, "N$"+ new DecimalFormat("0.00").format(totalCost8)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C9000, "N$"+ new DecimalFormat("0.00").format(C9000Price)) + "               " + String.format("%-30s%s", QTY_Of_C9000, "N$"+ new DecimalFormat("0.00").format(totalCost9)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C0100, "N$"+ new DecimalFormat("0.00").format(C0100Price)) + "               " + String.format("%-30s%s", QTY_Of_C0100, "N$"+ new DecimalFormat("0.00").format(totalCost10)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C0200, "N$"+ new DecimalFormat("0.00").format(C0200Price)) + "               " + String.format("%-30s%s", QTY_Of_C0200, "N$"+ new DecimalFormat("0.00").format(totalCost11)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C0300, "N$"+ new DecimalFormat("0.00").format(C0300Price)) + "               " + String.format("%-30s%s", QTY_Of_C0300, "N$"+ new DecimalFormat("0.00").format(totalCost12)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C0400, "N$"+ new DecimalFormat("0.00").format(C0400Price)) + "               " + String.format("%-30s%s", QTY_Of_C0400, "N$"+ new DecimalFormat("0.00").format(totalCost13)) )
+Display (String.format("%-30s%s" ,C0400, "N$"+ new DecimalFormat("0.00").format(C0400Price)) + "               " + String.format("%-30s%s", QTY_Of_C0400, "N$"+ new DecimalFormat("0.00").format(totalCost13)) )
 		
   Display (String.format("%-30s%s" ,C0500, "N$"+ new DecimalFormat("0.00").format(C0500Price)) + "               " + String.format("%-30s%s", QTY_Of_C0500, "N$"+ new DecimalFormat("0.00").format(totalCost14)) )
 			   
+Display (String.format("%-30s%s" ,C0600, "N$"+ new DecimalFormat("0.00").format(C0600Price)) + "               " + String.format("%-30s%s", QTY_Of_C0600, "N$"+ new DecimalFormat("0.00").format(totalCost15)) )
 			   
-			   Display (String.format("%-30s%s" ,C0600, "N$"+ new DecimalFormat("0.00").format(C0600Price)) + "               " + String.format("%-30s%s", QTY_Of_C0600, "N$"+ new DecimalFormat("0.00").format(totalCost15)) )
-			   
-			   
-			   Display (String.format("%-30s%s" ,C0700, "N$"+ new DecimalFormat("0.00").format(C0700Price)) + "               " + String.format("%-30s%s", QTY_Of_C0700, "N$"+ new DecimalFormat("0.00").format(totalCost16)) )
+Display (String.format("%-30s%s" ,C0700, "N$"+ new DecimalFormat("0.00").format(C0700Price)) + "               " + String.format("%-30s%s", QTY_Of_C0700, "N$"+ new DecimalFormat("0.00").format(totalCost16)) )
 			   
 			   
    Display (String.format("%-30s%s" ,C1800, "N$"+ new DecimalFormat("0.00").format(C1800Price)) + "               " + String.format("%-30s%s", QTY_Of_C1800, "N$"+ new DecimalFormat("0.00").format(totalCost17)) 	   
