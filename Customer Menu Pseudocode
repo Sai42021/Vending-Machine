@@ -21,20 +21,20 @@ customerMenu() {
  Display ("Please enter the quantity of the item(s) you would like to purchase NB: ENTER (0) FOR THE THE ITEMS YOUR NOT INTERESTED IN!")
 	 	   
   Display ("Enter quantity of " + C0001 + "_" + "N$"+ new DecimalFormat("0.00").format(C0001Price) + ": ")
-	   Declare Declare int QTY_Of_C0001 
+	   Declare int QTY_Of_C0001 
 	   C0001count = C0001count - QTY_Of_C0001
 	   
 	   
 Display ("Enter quantity of " + C0002 + "_" + "N$"+ new DecimalFormat("0.00").format(C0002Price) + ": ")
-	   Declare Declare int QTY_Of_C0002 
+	   Declare int QTY_Of_C0002 
 	   C0002count = C0002count - QTY_Of_C0002
 	  
  Display ("Enter quantity of " + C0003 + "_" + "N$"+ new DecimalFormat("0.00").format(C0003Price) + ": ")
-	  Declare Declare int QTY_Of_C0003 = 
+	  Declare int QTY_Of_C0003 = 
 	   C0003count = C0003count - QTY_Of_C0003   
    
 Display ("Enter quantity of " + C0004 + "_" + "N$"+ new DecimalFormat("0.00").format(C0004Price) + ": ")
-	   Declare Declare int QTY_Of_C0004 
+	   Declare int QTY_Of_C0004 
 	   C0004count = C0004count - QTY_Of_C0004
 	   	   
  Display ("Enter quantity of " + C0007 + "_" + "N$"+ new DecimalFormat("0.00").format(C0007Price) + ": ")
@@ -105,118 +105,114 @@ Display ("Enter quantity of " + C1900 + "_" + "N$"+ new DecimalFormat("0.00").fo
 	   double totalCost17 = C1800Price * QTY_Of_C1800
 	   double totalCost18 = C1900Price * QTY_Of_C1900
 	   
-	   double Actual_Total_Cost = (totalCost1 + totalCost2 + totalCost3 + totalCost4 + totalCost7 +
-			                       totalCost8 + totalCost9 + totalCost10 + totalCost11 + totalCost12 + 
-			                       totalCost13 + totalCost14 + totalCost15 + totalCost16 + totalCost17 + totalCost18)   
+double Actual_Total_Cost = (totalCost1 + totalCost2 + totalCost3 + totalCost4 + totalCost7 + totalCost8 + totalCost9 + totalCost10 + totalCost11 + totalCost12 + totalCost13 + totalCost14 + totalCost15 + totalCost16 + totalCost17 + totalCost18)   
 Display ("Your total is N$" + new DecimalFormat("0.00").format(Actual_Total_Cost))
 Display ("Enter cash amount: ")
-	   double Cash_Amount = CustomerInput.nextDouble()
-	   
-	   double Change = Cash_Amount - Actual_Total_Cost
-	   
-	   if(Cash_Amount >= Actual_Total_Cost && Change >= 0) {
-	   
-	    double real_change = Change
+Declare double Cash_Amount = CustomerInput.nextDouble( 
+Declare double Change = Cash_Amount - Actual_Total_Cost
+ if (Cash_Amount >= Actual_Total_Cost && Change >= 0) {
+Declare  double real_change = Change
+  
+int two_hundred_dollars = (int) Change / 200
+ Change = Change % 200 
 		
-		int two_hundred_dollars = (int) Change / 200
-		Change = Change % 200 
+int one_hundred_dollars = (int) Change / 100
+Change = Change % 100 
+
+int fifty_dollars = (int) Change / 50
+Change = Change % 50 
 		
-		int one_hundred_dollars = (int) Change / 100
-		Change = Change % 100 
+int thirty_dollars = (int) Change / 30
+Change = Change % 30 
 		
-		int fifty_dollars = (int) Change / 50
-		Change = Change % 50 
+int twenty_dollars = (int) Change / 20
+Change = Change % 20 
 		
-		int thirty_dollars = (int) Change / 30
-		Change = Change % 30 
+
+int ten_dollars = (int) Change / 10
+Change = Change % 10
 		
-		int twenty_dollars = (int) Change / 20
-		Change = Change % 20 
+int five_dollars = (int) Change / 5
+Change = Change % 5
 		
-		int ten_dollars = (int) Change / 10
-		Change = Change % 10
+int one_dollar = (int)Change / 1
+Change = Change % 1
+
+double fifty_cent = Change / 0.5
+Change = Change % 0.5
 		
-		int five_dollars = (int) Change / 5
-		Change = Change % 5
+double ten_cents = (int) Change % 0.10
+Change = Change % 0.10
 		
-		int one_dollar = (int)Change / 1
-		Change = Change % 1
+double five_cents = (int) Change 
 		
-		double fifty_cent = Change / 0.5
-		Change = Change % 0.5
-		
-		double ten_cents = (int) Change % 0.10
-		Change = Change % 0.10
-		
-		double five_cents = (int) Change 
-		
-		  fiveCentCount = (int) (fiveCentCount - five_cents) 
-		  tenCentCount = (int) (tenCentCount - ten_cents)
-		  fiftyCentCount = (int) (fiftyCentCount - fifty_cent)
-		  oneDollarCount = oneDollarCount - one_dollar
-		  fiveDollarCount = fiveDollarCount - five_dollars
-		  tenDollarCount = tenDollarCount - ten_dollars
-		  twentyDollarCount = twentyDollarCount - twenty_dollars
-		  thirtyDollarCount = thirtyDollarCount - thirty_dollars
-		  fiftyDollarCount = fiftyDollarCount - fifty_dollars
-		  oneHundredDollarCount = oneHundredDollarCount - one_hundred_dollars
-		  twoHundredDollarCount = twoHundredDollarCount - two_hundred_dollars
-		  //*Add the amount the customer entered to keep track of profit
-		  total = total + Cash_Amount
-		  //*Subtract change from total 
-		  total = total - real_change
+fiveCentCount = (int) (fiveCentCount - five_cents)
+tenCentCount = (int) (tenCentCount - ten_cents)
+fiftyCentCount = (int) (fiftyCentCount - fifty_cent)
+oneDollarCount = oneDollarCount - one_dollar
+fiveDollarCount = fiveDollarCount - five_dollars
+tenDollarCount = tenDollarCount - ten_dollars
+twentyDollarCount = twentyDollarCount - twenty_dollars
+thirtyDollarCount = thirtyDollarCount - thirty_dollars
+fiftyDollarCount = fiftyDollarCount - fifty_dollars
+oneHundredDollarCount = oneHundredDollarCount - one_hundred_dollars
+twoHundredDollarCount = twoHundredDollarCount - two_hundred_dollars
+//*Add the amount the customer entered to keep track of profit
+total = total + Cash_Amount
+//*Subtract change from total
+total = total - real_change
 		  
-		  //*The following lines of code will then increment the monetary counters based on what the total is after the cash amount has been entered and the change dispersed
-		  //*The variable calculationTotal is declared to be used in the calculations without altering the total variable
-		  double calculationTotal = total
-		  
-		  int two_hundred_dollars_count = (int) calculationTotal / 200
-		  calculationTotal = calculationTotal % 200 
-			
-			int one_hundred_dollars_count = (int) calculationTotal / 100
-			calculationTotal = calculationTotal % 100 
-			
-			int fifty_dollars_count = (int) calculationTotal / 50
-			calculationTotal = calculationTotal % 50 
-			
-			int thirty_dollars_count = (int) calculationTotal / 30
-			calculationTotal = calculationTotal % 30 
-			
-			int twenty_dollars_count = (int) calculationTotal / 20
-			calculationTotal = calculationTotal % 20 
-			
-			int ten_dollars_count = (int) calculationTotal / 10
-			calculationTotal = calculationTotal % 10
-			
-			int five_dollars_count = (int) calculationTotal / 5
-			calculationTotal = calculationTotal % 5
-			
-			int one_dollar_count = (int)calculationTotal / 1
-			calculationTotal = calculationTotal % 1
-			
-			double fifty_cent_count = calculationTotal / 0.5
-			calculationTotal = calculationTotal % 0.5
-			
-			double ten_cents_count = (int) calculationTotal % 0.10
-			calculationTotal = calculationTotal % 0.10
-			
-			double five_cents_count = (int) calculationTotal 
-			//*Now that we have calculated the amount by which each every monetary counter should be incremented we have to write code that will add these values to the monetary counters
-			fiveCentCount = (int) (fiveCentCount + five_cents_count) 
-			  tenCentCount = (int) (tenCentCount + ten_cents_count)
-			  fiftyCentCount = (int) (fiftyCentCount + fifty_cent_count)
-			  oneDollarCount = oneDollarCount + one_dollar_count
-			  fiveDollarCount = fiveDollarCount + five_dollars_count
-			  tenDollarCount = tenDollarCount + ten_dollars_count
-			  twentyDollarCount = twentyDollarCount + twenty_dollars_count
-			  thirtyDollarCount = thirtyDollarCount + thirty_dollars_count
-			  fiftyDollarCount = fiftyDollarCount + fifty_dollars_count
-			  oneHundredDollarCount = oneHundredDollarCount + one_hundred_dollars_count
-			  twoHundredDollarCount = twoHundredDollarCount + two_hundred_dollars_count
-			  //*The code above increments each monetary counter based on how much money is entered by the user
+//*The following lines of code will then increment the monetary counters based on what the total is after the cash amount has been entered and the change dispersed
+  //*The variable calculationTotal is declared to be used in the calculations without altering the total variable
+double calculationTotal = total
+
+int two_hundred_dollars_count = (int) calculationTotal / 200
+calculationTotal = calculationTotal % 200
+
+int one_hundred_dollars_count = (int) calculationTotal / 100
+calculationTotal = calculationTotal % 100
+
+int fifty_dollars_count = (int) calculationTotal / 50
+calculationTotal = calculationTotal % 50
+
+int thirty_dollars_count = (int) calculationTotal / 30
+calculationTotal = calculationTotal % 30
+
+int twenty_dollars_count = (int) calculationTotal / 20
+calculationTotal = calculationTotal % 20
+
+int ten_dollars_count = (int) calculationTotal / 10
+calculationTotal = calculationTotal % 10
+
+int five_dollars_count = (int) calculationTotal / 5
+calculationTotal = calculationTotal % 5
+
+int one_dollar_count = (int)calculationTotal / 1
+calculationTotal = calculationTotal % 1
+
+double fifty_cent_count = calculationTotal / 0.5
+calculationTotal = calculationTotal % 0.5
+
+double ten_cents_count = (int) calculationTotal % 0.10
+calculationTotal = calculationTotal % 0.10
+
+double five_cents_count = (int) calculationTotal
+//*Now that we have calculated the amount by which every monetary counter should be incremented we have to write code that will add these values to the monetary counters
+	fiveCentCount = (int) (fiveCentCount + five_cents_count) 
+	tenCentCount = (int) (tenCentCount + ten_cents_count)
+	  fiftyCentCount = (int) (fiftyCentCount + fifty_cent_count)
+	 oneDollarCount = oneDollarCount + one_dollar_count
+	fiveDollarCount = fiveDollarCount + five_dollars_count
+	tenDollarCount = tenDollarCount + ten_dollars_count
+	 twentyDollarCount = twentyDollarCount + twenty_dollars_count
+	thirtyDollarCount = thirtyDollarCount + thirty_dollars_count
+	fiftyDollarCount = fiftyDollarCount + fifty_dollars_count
+	oneHundredDollarCount = oneHundredDollarCount + one_hundred_dollars_count
+	 twoHundredDollarCount = twoHundredDollarCount + two_hundred_dollars_count
+ //*The code above increments each monetary counter based on how much money is entered by the user
 		  Display ("Your change is N$: " + new DecimalFormat("0.00").format(real_change))
 		  		  
-          //*Receipt layout 
+  //*Receipt layout 
 Display ("**                                       X AVENDERS VENDING MACHINE X                                    **")
 	
   Display ("***********************************************************************************************************")
@@ -252,36 +248,32 @@ Display (String.format("%-30s%s" ,C0600, "N$"+ new DecimalFormat("0.00").format(
 Display (String.format("%-30s%s" ,C0700, "N$"+ new DecimalFormat("0.00").format(C0700Price)) + "               " + String.format("%-30s%s", QTY_Of_C0700, "N$"+ new DecimalFormat("0.00").format(totalCost16)) )
 			   
 			   
-   Display (String.format("%-30s%s" ,C1800, "N$"+ new DecimalFormat("0.00").format(C1800Price)) + "               " + String.format("%-30s%s", QTY_Of_C1800, "N$"+ new DecimalFormat("0.00").format(totalCost17)) 	   
+   Display (String.format("%-30s%s", C1800, "N$"+ new DecimalFormat("0.00").format(C1800Price)) + "               " + String.format("%-30s%s", QTY_Of_C1800, "N$"+ new DecimalFormat("0.00").format(totalCost17)) 	   
 			   
-  Display (String.format("%-30s%s" ,C1900, "N$"+ new DecimalFormat("0.00").format(C1900Price)) + "               " + String.format("%-30s%s", QTY_Of_C1900, "N$"+ new DecimalFormat("0.00").format(totalCost18)) )
+  Display (String.format("%-30s%s”, C1900, "N$"+ new DecimalFormat("0.00"). format(C1900Price)) + "               " + String.format("%-30s%s", QTY_Of_C1900, "N$"+ new DecimalFormat("0.00").format(totalCost18)) )
 			   
 Display ("----------------------------------------------------------------------------------------------------------")
- Display  ("Total                                                                                   " + "N$" +  new DecimalFormat("0.00").format(Actual_Total_Cost))
+ Display ("Total                                                                                   " + "N$" + new DecimalFormat("0.00").format(Actual_Total_Cost))
 			 
- Display ("Tendered                                                                                " + "N$" +  new DecimalFormat("0.00").format(Cash_Amount))
- Display ("Change                                                                                  " + "N$" +  new DecimalFormat("0.00").format(real_change))
+ Display ("Tendered                                                                                " + "N$" + new DecimalFormat("0.00"). format(Cash_Amount))
+ Display ("Change                                                                                  " + "N$" + new DecimalFormat("0.00"). format(real_change))
 			 
-		  Display ("Change disbursed as follows: " + two_hundred_dollars + " x N$ 200 " + one_hundred_dollars 
-						  + " x N$ 100 " + fifty_dollars + " x N$ 50 " + thirty_dollars 
-						  + " x N$ 30 " + twenty_dollars + " x N$ 20 " + ten_dollars + " x N$10 " 
-						  + five_dollars +" x N$5 " + one_dollar + " x N$1 " 
-						  +new DecimalFormat("0").format(fifty_cent)  + " x 50c " + 
-						  new DecimalFormat("0").format(ten_cents) + " x 10c " + 
-						  new DecimalFormat("0").format(five_cents) + " x 5c " )
+Display ("Change disbursed as follows: " + two_hundred_dollars + " x N$ 200 " + one_hundred_dollars 
+ + " x N$ 100 " + fifty_dollars + " x N$ 50 " + thirty_dollars  + " x N$ 30 " + twenty_dollars + " x N$ 20 " + ten_dollars + " x N$10 "  + five_dollars +" x N$5 " + one_dollar + " x N$1 " 
++new DecimalFormat("0").format(fifty_cent)  + " x 50c " + new DecimalFormat("0").format(ten_cents) + " x 10c " + new DecimalFormat("0").format(five_cents) + " x 5c " )
   Display ("*******************************************************************************************************")
 				
-				  //*We set the desired format the date and time and print it out to be Display ed in the receipt
+  //*We set the desired format the date and time and print it out to be Display ed in the receipt
 				  SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy_HH:mm:ss")  
-				  Date date = new Date()  
+				  Date date = new Date ()  
 				  Display ("Date: " + formatter.format(date))
-				  Display ("*******************************************************************************************************")
-				  Display ("Thank you. Come Again :)")
-				  Display ("*******************************************************************************************************")
+ Display ("*******************************************************************************************************")
+  Display ("Thank you. Come Again :)")
+ Display ("*******************************************************************************************************")
 
 	   }
-	   else {Display ("The amount you have entered is not sufficiant for this transaction :(")
+	   else {Display ("The amount you have entered is not sufficient for this transaction ")}
 	         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy_HH:mm:ss")  
 		     Date date = new Date()  
-		     Display ("Date: " + formatter.format(date))}
+		     Display ("Date: " + formatter.format(date));}
 	
