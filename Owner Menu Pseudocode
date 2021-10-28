@@ -1,23 +1,484 @@
-Owner's Menu
-String: Error message 
-Integer: Verification Code
-ownerMenu(code){
-start
-Prompt Owner for verificationCode
-Get verificationCode
-If (verificationCode == 8162){
-Display Menu
-Privilege to restock
-Add New Items to vending machine
-change prices
-cash out certain amount from machine
-cash out
-cash in certain amount
-print summary of items in stock
-print out amount of cash in categories
-print items that need restocking
-items<100}
-else {
-Print “Error! Invalid entry.”}
-endCase
-}
+ ownerMenu() {
+
+Start
+
+
+ Prompt user for verificiation code
+
+ Get verification code
+                  
+ Display actions
+
+ Restock(2310)
+ Add new Item(2311)
+ Change price of item(2312)
+ Cash in(2313)
+ Cash out(2314)
+ Print summary of items in stock(2315)
+ Print out amount of cash in categories(2316)
+ Print items that need re-stocking(2317)
+
+Prompt user for action code
+
+Get action code 				
+   
+    if actionCode==2310
+       Dispaly "Available products and codes shown below"		
+			
+				
+			        Maltesers(C0002);
+			      
+			        Jellybeans(C0003);
+			        
+			        Sour worms(C0004);
+			          
+			        Egg Salad Sandwhich(C0007);
+			           
+			       Pie(C8000);
+			        
+			        Burger(C9000);
+			     
+			        Latte(C0100);
+			       
+			        Tea(C0200);
+			       
+			        Cappuccino(C0300);
+			       
+			        Hot Chocolate(C0400);
+
+			        Coke(C0500);
+
+			        Dr Pepper(C0600)
+
+			        Pepsi(C0700);
+
+			        Tab(C1800)
+
+			        Sprite(C1900);
+					
+					//*Space is added in between to make it easier to read the prompt from the console
+					
+			
+
+				Display  ("Enter the name and code of item (As shown above) to be re-stocked and the amount you want to add seperated by a single SPACE "); 
+				
+				Declare String ItemtoRestock
+				Declare String amountToAdd1  
+
+				ItemtoRestock1 = Convert to LowerCase();
+				int amountToAdd = Convert to int
+				
+				//* We wrote a nested case statement to increment the items counter based on the admins inputs 
+				
+				switch(ItemtoRestock1) {
+				   case  "m&m(c0001)":
+					   C0001count = C0001count + amountToAdd;
+				    break;
+				   case "maltesers(c0002)":
+					   C0002count = C0002count + amountToAdd;
+				    break;
+				   case "jelly-beans(c0003)":
+					   C0003count = C0003count + amountToAdd;
+					    break;
+				   case "sour-worms(c0004)":
+					   C0004count = C0004count + amountToAdd;
+					    break;
+				   case "egg-salad-sandwich(c0007)":
+					   C0007count =  C0007count + amountToAdd;
+					    break;
+				   case "pie(c8000)":
+					   C8000count = C8000count + amountToAdd;
+					    break;
+				   case "burger(c9000)":
+					   C9000count = C9000count + amountToAdd;
+					    break;
+				   case "latte(c0100)":
+					   C0100count = C0100count + amountToAdd;
+					    break;
+				   case "tea(c0200)":
+					   C0200count = C0200count + amountToAdd;
+					    break;
+				   case "cappuccino(c0300)":
+					   C0300count = C0300count + amountToAdd;
+					    break;
+				   case "hot-chocolate(c0400)":
+					   C0400count = C0400count + amountToAdd;
+					    break;
+				   case "coke(c0500)":
+					   C0500count = C0500count + amountToAdd;
+					    break;
+				   case "dr.pepper(c0600)":
+					   C0600count = C0600count + amountToAdd;
+					    break;
+				   case "pepsi(c0700)":
+					   C0700count = C0700count + amountToAdd;
+					    break;
+				   case "tab(c1800)":
+					   C1800count = C1800count + amountToAdd;
+					    break;
+				   case "sprite(c1900)":
+					   C1900count = C1900count + amountToAdd;
+					    break;
+					default: Display("Invalid entry! Please check your spelling and spacing." + "'" + ItemtoRestock + "'");    
+				    }
+				}
+				
+				//*Add new Item(2311)
+				else if(actionCode == 2311) {
+					 
+					
+					System.out.println("Available products and codes shown below: ");
+				Display(C0001);     
+			        Display(C0002)
+			        Display(C0003);
+			        Display(C0004);
+			        Display(C0007);
+			        Display(C8000);
+			        Display(C9000);
+			        Display(C0100);
+			        Display(C0200);
+			        Display(C0300);
+			        Display(C0400);
+			        Display(C0500);
+			        Display(C0600);
+			        Display(C0700);
+			        Display(C1800);
+			        Display(C1900);
+										
+					
+					Display("Enter name and code of new item according to the following naming convention e.g M&M(C0001)");
+					
+					Display("You have successfully added " + newItemAndCode + " to the vending machine.");
+				}
+				//*Change price of item(2312)
+				else if(actionCode == 2312) {
+					
+					Display("Available products and codes shown below: ");
+
+	                        Display(C0001 + "  N$" + C0001Price);
+			        Display(C0002 + "  N$" + C0002Price);			 
+			        Display(C0003 + "  N$" + C0003Price);			
+			        Display(C0004 + "  N$" + C0004Price);
+			        Display(C0007 + "  N$" + C0007Price);
+			        Display(C8000 + "  N$" + C8000Price);
+			        Display(C9000 + "  N$" + C9000Price);
+			        Display(C0100 + "  N$" + C0100Price);
+			        Display(C0200 + "  N$" + C0200Price);
+			        Display(C0300 + "  N$" + C0300Price);
+			        Display(C0400 + "  N$" + C0400Price);
+			        Display(C0500 + "  N$" + C0500Price);
+			        Display(C0600 + "  N$" + C0600Price);
+			        Display(C0700 + "  N$" + C0700Price);
+			        Display(C1800 + "  N$" + C1800Price);
+			        Display(C1900 + "  N$" + C1900Price);
+					
+					//*Space is added in between to make it easier to read the prompt from the console
+					
+					
+					Display("Enter the code of the item who's price you would like to alter and enter the new price of the item seperated by a single space: e.g C0001 20.00 NB:ITEM CODE SHOULD NOT CHANGE!!!: ");
+					
+					
+					
+					//*The following lines of code split the users input into two separate string variables needed for switch statement
+					
+					Declare String itemCode
+					Declare String newPricePosition
+					
+					//*Convert newPricePosition to double and declare it as newPrice 
+					
+					
+					//*We created a switch statement to change a products price or name based on what the admins inputs
+					switch(itemCode) {
+					
+					   case "C0001":
+						C0001Price = newPrice;
+						Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+					    break;
+					   case "C0002":
+						   C0002Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+					    break;
+					   case "C0003":
+						   C0003Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0004":
+						   C0004Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0007":
+						   C0007Price =  newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C8000":
+						   C8000Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C9000":
+						   C9000Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0100":
+						   C0100Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0200":
+						   C0200Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0300":
+						   C0300Price = newPrice ;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0400":
+						   C0400Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0500":
+						   C0500Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0600":
+						   C0600Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C0700":
+						   C0700Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C1800":
+						   C1800Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+					   case "C1900":
+						   C1900Price = newPrice;
+						   Display("You have successfully changed thisitems pric to N$" + newPrice + "!");
+						    break;
+						default: Display("Invalid entry! Please check your spelling and spacing." + "'" + itemCode + "'" + " and " + "'" + newPrice + "'" );    	
+					}
+				
+				} 
+				//*Cash in(2313));
+				else if(actionCode == 2313) {
+					Display("Available notes/coins: ");
+					Display("N$0.05" + " = " +fiveCentCount); 
+					Display("N$0.10" + " = " + tenCentCount);;
+					Display("N$0.50" + " = " +fiftyCentCount); 
+					Display("N$1.00" + " = " + oneDollarCount);
+					Display("N$5.00" + " = " + fiveDollarCount);
+					Display("N$10.00" + " = " + tenDollarCount);
+					Display("N$20.00" + " = " + twentyDollarCount);
+					Display("N$30.00" + " = " + thirtyDollarCount);
+					Display("N$50.00" + " = " + fiftyDollarCount);
+					Display("N$100.00" + " = " + oneHundredDollarCount);
+					Display("N$200.00" + " = " + twoHundredDollarCount);
+					
+					Display("Total = " + new DecimalFormat("0.00").format(total));
+					
+			
+					Display("Enter the name of the note/coin you would like to increment or decrement and the new amount of that note/coin seperated by a single space e.g N$1.00 200: ");
+					Declare String ca$hToChangePlusnewCa$hAmount
+					
+					//*The following lines of code split the users input into two separate string variables needed for switch statement
+				
+					Declare String ca$hToChange
+					Declare int newCa$hAmount 
+					
+					
+					
+					switch(ca$hToChange) {
+					
+					case "N$0.05":
+						fiveCentCount = newCa$hAmount;
+						Display("You have successfully changed N$0.05 count"+ " to " + newCa$hAmount );
+						break;
+					case "N$0.10":
+						tenCentCount = newCa$hAmount;
+						Display("You have successfully changed N$0.10 count" + " to " + newCa$hAmount );
+						break;
+					case "N$0.50":
+						fiftyCentCount = newCa$hAmount;
+						Display("You have successfully changed N$0.50 count" + " to " + newCa$hAmount );
+						break;
+					case "N$1.00":
+						oneDollarCount = newCa$hAmount;
+						Display("You have successfully changed N$1.00 count" + " to " + newCa$hAmount );
+						break;
+					case "N$5.00":
+						fiveDollarCount = newCa$hAmount;
+						Display("You have successfully changed N$5.00 count" + " to " + newCa$hAmount );
+						break;
+					case "N$10.00":
+						tenDollarCount = newCa$hAmount;
+						Display("You have successfully changed N$10.00 count" + " to " + newCa$hAmount );
+						break;
+					case "N$20.00":
+						twentyDollarCount = newCa$hAmount;
+						Display("You have successfully changed N$20.00 count" + " to " + newCa$hAmount );
+						break;
+					case "N$30.00":
+						thirtyDollarCount = newCa$hAmount;
+						Display("You have successfully changed N$30.00 count" + " to " + newCa$hAmount );
+						break;
+					case "N$50.00":
+						fiftyDollarCount = newCa$hAmount;
+						Display("You have successfully changed N$50.00 count" + " to " + newCa$hAmount );
+						break;
+					case "N$100.00":
+						oneHundredDollar = newCa$hAmount;
+						Display("You have successfully changed N$100.00 count" + " to " + newCa$hAmount );
+						break;
+					case "N$200.00":
+						twoHundredDollarCount = newCa$hAmount;
+						Display("You have successfully changed N$200.00 count" + " to " + newCa$hAmount );
+						break;
+						default: Display("Invalid entry!! Check entry and try again.");
+					}
+				}
+				//*Cash out(2314)
+				else if(actionCode == 2314) {
+					
+					Display("Enter the amount you want to cash out: ");
+					Declare double cashOutAmountToDesplay
+					Declare double cashOutAmount = cashOutAmountToDesplay;
+					
+					Declare double real_cashOutAmount = cashOutAmount;
+					
+					int two_hundred_dollars = (int) cashOutAmount / 200;
+					cashOutAmount = cashOutAmount % 200; 
+					
+					int one_hundred_dollars = (int) cashOutAmount / 100;
+					cashOutAmount = cashOutAmount % 100; 
+					
+					int fifty_dollars = (int) cashOutAmount / 50;
+					cashOutAmount = cashOutAmount % 50; 
+					
+					int thirty_dollars = (int) cashOutAmount / 30;
+					cashOutAmount = cashOutAmount % 30; 
+					
+					int twenty_dollars = (int) cashOutAmount / 20;
+					cashOutAmount = cashOutAmount % 20; 
+					
+					int ten_dollars = (int) cashOutAmount / 10;
+					cashOutAmount = cashOutAmount % 10;
+					
+					int five_dollars = (int) cashOutAmount / 5;
+					cashOutAmount = cashOutAmount % 5;
+					
+					int one_dollar = (int)cashOutAmount / 1;
+					cashOutAmount = cashOutAmount % 1;
+					
+					double fifty_cent = cashOutAmount / 0.5;
+					cashOutAmount = cashOutAmount % 0.5;
+					
+					double ten_cents = (int) cashOutAmount % 0.10;
+					cashOutAmount = cashOutAmount % 0.10;
+					
+					double five_cents = (int) cashOutAmount; 
+					
+					  fiveCentCount = (int) (100 - five_cents); 
+					  tenCentCount = (int) (100 - ten_cents);
+					  fiftyCentCount = (int) (100 - fifty_cent);
+					  oneDollarCount = 500 - one_dollar;
+					  fiveDollarCount = 100 - five_dollars;
+					  tenDollarCount = 100 - ten_dollars;
+					  twentyDollarCount = 100 - twenty_dollars;
+					  thirtyDollarCount = 100 - thirty_dollars;
+					  fiftyDollarCount = 50 - fifty_dollars;
+					  oneHundredDollarCount = 20 - one_hundred_dollars;
+					  twoHundredDollarCount = 20 - two_hundred_dollars;
+					  total = total - real_cashOutAmount;
+					  
+					  Display("You have successfully cashed out " + new DecimalFormat("0.00").format(cashOutAmountToDesplay));
+
+					  Display("Disbursed as follows: " + two_hundred_dollars + " x N$ 200; " + one_hundred_dollars 
+							  + " x N$ 100; " + fifty_dollars + " x N$ 50; " + thirty_dollars 
+							  + " x N$ 30; " + twenty_dollars + " x N$ 20; " + ten_dollars + " x N$10; " 
+							  + five_dollars +" x N$5; " + one_dollar + " x N$1; " 
+							  +new DecimalFormat("0").format(fifty_cent)  + " x 50c; " + 
+							  new DecimalFormat("0").format(ten_cents) + " x 10c; " + 
+							  new DecimalFormat("0").format(five_cents) + " x 5c; " );
+					
+					  
+					  Display("There is a total of " + "N$" + new DecimalFormat("0.00").format(total) + " left in the vending machine.");
+				}
+				//*Print summary of items in stock(2315)
+				else if(actionCode == 2315) {
+					Display("Summary of stock: ");
+					
+					Display(C0001 + ": " + C0001count + " in stock");
+			
+	                Display(C0002 + ": " + C0002count + " in stock");
+	                
+		            Display(C0003 + ": " + C0003count + " in stock");
+		            Display(C0004 + ": " + C0004count + " in stock");
+		            Display(C0007 + ": " + C0007count + " in stock");
+		            Display(C8000 + ": " + C8000count + " in stock");
+		            Display(C9000 + ": " + C9000count + " in stock");
+		            Display(C0100 + ": " + C0100count + " in stock");
+		            Display(C0200 + ": " + C0200count + " in stock");		         
+		            Display(C0300 + ": " + C0300count + " in stock");
+		            Display(C0400 + ": " + C0400count + " in stock");
+		            Display(C0500 + ": " + C0500count + " in stock");
+		            Display(C0600 + ": " + C0600count + " in stock");
+		            Display(C0700 + ": " + C0700count + " in stock");
+		            Display(C1800 + ": " + C1800count + " in stock");		
+		            Display(C1900 + ": " + C1900count + " in stock");
+		            
+				}
+				//*Print out amount of cash in categories(2316)
+				else if(actionCode == 2316) {
+					Display("Amount of cash in categories: ");
+					
+					Display("N$0.05" + " = " +fiveCentCount); 
+					Display("N$0.10" + " = " + tenCentCount);
+					Display("N$0.50" + " = " +fiftyCentCount); 
+					Display("N$1.00" + " = " + oneDollarCount);
+					Display("N$5.00" + " = " + fiveDollarCount);
+					Display("N$10.00" + " = " + tenDollarCount);
+					Display("N$20.00" + " = " + twentyDollarCount);
+					Display("N$30.00" + " = " + thirtyDollarCount);
+					Display("N$50.00" + " = " + fiftyDollarCount);
+					Display("N$100.00" + " = " + oneHundredDollarCount);
+					Display("N$200.00" + " = " + twoHundredDollarCount);;
+					Display("Total = " + "N$" + new DecimalFormat("0.00").format(total));
+				}
+				//*Print items that need re-stocking(2317)
+				else if(actionCode == 2317) {
+                           if(C0001count < 25) {Display(C0001 + "is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0001count < 25) {Display(C0001 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0002count < 25) {Display(C0002 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0003count < 25) {Display(C0003 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0004count < 25) {Display(C0004 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0007count < 25) {Display(C0007 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C8000count < 25) {Display(C8000 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C9000count < 25) {Display(C9000 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0100count < 25) {Display(C0100 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0200count < 25) {Display(C0200 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0300count < 25) {Display(C0300 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0400count < 25) {Display(C0400 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0600count < 25) {Display(C0600 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                           
+                           if(C0700count < 25) {Display(C0700 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                          
+                           if(C1800count < 25) {Display(C1800 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                         
+                           if(C1900count < 25) {Display(C1900 + ", is less than required amount and needs to be restocked. Please do check summary of stock.");
+                          
+                           else {Display("Nothing else needs restocking at the moment.");}
+				  
+				  }else {Display("Invalid code!! Try again.");}}
+				
+			}  //*END OF ownerMenu()
