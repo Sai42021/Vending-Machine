@@ -1,6 +1,5 @@
-Start
+START
 customerMenu() {
-
 	   
         Display ("Available products and codes shown below: ");
         Case of (code) {
@@ -23,3 +22,175 @@ customerMenu() {
  Default: Select C1200 then
 Display errorMessage
 endcase
+	    
+ //Scanner CustomerInput = new Scanner(System.in);
+	 Prompt customer for customerInput
+Get customerInput 	   
+Display "Please enter number of items you would like to purchase: "
+numberofItems = customerInput
+if (numberofItems < 0) 
+Print ("Invalid amount entered! Please check your entry and try again.")
+else 
+Print ("Enter cash amount N$: ")
+
+Prompt for cashAmount
+Get cashAmount	   
+// double amountTendered = CustomerInput.nextDouble();
+// double Amount_entered = amountTendered;
+	  
+ int prompt Count = 0
+		   
+ while(promptCount < numberofItems) 
+//Scanner CustomerSelect = new Scanner(System.in)
+Prompt user for customerSelection
+Get customerSelection
+Display ("Please enter product code for the product you would like to purchase: ")
+			
+			
+			  
+			   switch(Customer_selection) {
+			   
+		 case C0001:
+			 // C0001count = C0001count - 1
+				change_1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change_1); 
+				break;
+					
+		case C0002:
+				// C0002count = C0002count - 1
+				change2 = amountTendered - C0002Price;
+				print ("You have successfully purchased " && Maltesers
+				Display change_2 ("Your change is N$" + change_2); 
+				break;
+
+					 
+			   case C0003:
+				    // C0003count = C0003count - 1
+				Change_3 = amountTendered - C0003Price;
+				print ("You have successfully purchased " && Jelly Beans
+				Display change_3 ("Your change is N$" + change_3); 
+				break;
+
+					 
+				case C0004:
+					// C0004count = C0004count - 1
+				Change4 = amountTendered - C0004Price;
+				print ("You have successfully purchased " && Sour worms
+				Display change_4
+			       	("Your change is N$" + change_4); 
+				break;
+
+					 
+				case C0007:
+					// C0007count = C0007count - 1
+				Change7 = amountTendered - C0007Price;
+				print ("You have successfully purchased " && Egg Salad sandwhich
+				Display change_7
+			       	 ("Your change is N$" + change_7); 
+				break;
+
+					 
+				case C0008:
+					// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && Pie
+				Display change_8
+			       	 ("Your change is N$" + change_8); 
+				break;
+ 
+				case "C0900":
+					// C0900count = C0900count - 1
+				change1 = amountTendered - C0900Price;
+				print ("You have successfully purchased " && M&M
+				Display change_9
+			       	 ("Your change is N$" + change_9); 
+				break;
+
+					 
+				case "C0100":
+					// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && Latte
+				Display change_10
+			       	 ("Your change is N$" + change_10); 
+				break;
+
+					 
+				case "C0200":
+				// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+
+					 
+				case "C0300":
+				// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+
+					 
+				case "C0400":
+					// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+
+					 
+				case "C0500":
+				// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+
+					 
+				case "C0600":
+					// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+
+					 
+				case "C0700":
+					// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+
+					 
+				case "C1800":
+					// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+					 
+				case "C1900":
+					// C0001count = C0001count - 1
+				change1 = amountTendered - C0001Price;
+				print ("You have successfully purchased " && M&M
+				Display change1
+			       	 ("Your change is N$" + change1); 
+				break;
+
+				case "C2100":
+			 (C2100);
+				default: ("Invalid entry!!"); 			        
+			       promptCount++;
+		   
+STOP
