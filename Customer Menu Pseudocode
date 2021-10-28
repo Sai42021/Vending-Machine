@@ -1,51 +1,25 @@
 Start
-String: Snacks, Food/Meal, Hot Drinks, Cold Drinks
-Int: itemCode, ownersPin
-If code ==3692 then 
-Display customerMenu()
-Else if code == 4812 then
-Display ownersMenu()
-Else Print “error Message”  
-DECLARE ourStock : ARRAY[0,16] of INT
-customerMenu () {
-1. Display options
-SNACKS = “M&M (N$10) (C0001), Maltesers (N$12) (C0002), Jelly Beans (N$7) (C0003), sour Worms (N$8) (C0004)”
-FOOD/MEAL =” Eggs salad sandwich(N$35) (C0007), Pie (N$25) (C0008), Burger (N$30) (C0009)”
-HOT DRINKS = “Latte(N$25) (C0100), Tea(N$15) (C0200), Cappuccino(N$25) (C0300), Hot chocolate(N$15) (C0400)”
-COLD DRINKS = “Coke(N$15) (C0500), Dr. Pepper(N$10) (C0600), Pepsi(N$10) (C0700), TAB(N$10) (C0800), Sprite(N$10) (C0900)”
-Return to landingPage = “EXIT MENU (C2100)”
-2. Set 
-       M&M(N$10) = C0001
-	Maltesers(N$12) = C0002
-	Jelly Beans(N$7) = C0003
-	Sour worms(N$8) = C0004
-	Egg salad sandwich(N$35) = C0007
-	Pie(N$25) = C0008
-	Burger(N$30) = C0009
-	Latte(N$25) = C0100
-	Tea(N$15) = C0200
-	Cappuccino(N$25) = C0300
-	Hot chocolate(N$15) = C0400
-	Coke(N$15) = C0500
-Dr. Pepper(N$10) = C0600
-	Pepsi(N$10) = C0700
-	TAB(N$10) = C0800
-	Sprite(N$10) = C0900
-	Sorry we could not help you = C2100
+customerMenu() {
 
-3. Prompt user for productcodeSelection 
-4. Get productcodeSelection
-for i = 0 to (n - 1) by 1 do
-  if (ourStock [i] = userSelection) then
-     set loc = i 
-       Exit 
-   endif 
-endfor
- set loc = -1 
-elseif
-(customer choice == 5) then 
-customerMenu ()
- end if
-endCase }
-5. End
-
+	   
+        Display ("Available products and codes shown below: ");
+        Case of (code) {
+1)	M&M = //code C0001 + C0001Price
+2)	Maltesers = //code C0002 + C0002Price	
+3)	Jelly Beans= //code C0003 + C0003Price
+4)	Sour worms = //code C0004 + C0004Price
+5)	Egg salad sandwhich = //code C0007 + C0007Price
+6)	Pie = //code C8000 + C8000Price
+7)	Burger = //code C9000 + C9000Price
+8)	Latte = C0100 + C0100Price
+9)	Tea = C0200 + C0200Price
+10)	 Cappuccino = C0300 + C0300Price
+11)	Hot Chocolate = C0400 + C0400Price
+12)	Coke = C0500 + C0500Price 
+13)	Dr.Pepper = C0600 + C0600Price
+14)	Pepsi = C0700 + C0700Price   
+15)	TAB = C1800 + C1800Price
+16)	Sprite = C1900 + C1900Price
+ Default: Select C1200 then
+Display errorMessage
+endcase
