@@ -166,7 +166,7 @@ public static void customerMenu() {
 	   
 	   double Change = Cash_Amount - Actual_Total_Cost;
 	   
-	   if(Cash_Amount >= Actual_Total_Cost && Change > 0) {
+	   if(Cash_Amount >= Actual_Total_Cost && Change >= 0) {
 	   
 	    double real_change = Change;
 		
@@ -202,21 +202,71 @@ public static void customerMenu() {
 		
 		double five_cents = (int) Change; 
 		
-		  fiveCentCount = (int) (100 - five_cents); 
-		  tenCentCount = (int) (100 - ten_cents);
-		  fiftyCentCount = (int) (100 - fifty_cent);
-		  oneDollarCount = 500 - one_dollar;
-		  fiveDollarCount = 100 - five_dollars;
-		  tenDollarCount = 100 - ten_dollars;
-		  twentyDollarCount = 100 - twenty_dollars;
-		  thirtyDollarCount = 100 - thirty_dollars;
-		  fiftyDollarCount = 50 - fifty_dollars;
-		  oneHundredDollarCount = 20 - one_hundred_dollars;
-		  twoHundredDollarCount = 20 - two_hundred_dollars;
-		   //*Add the amount the customer entered to keep track of profit
+		  fiveCentCount = (int) (fiveCentCount - five_cents); 
+		  tenCentCount = (int) (tenCentCount - ten_cents);
+		  fiftyCentCount = (int) (fiftyCentCount - fifty_cent);
+		  oneDollarCount = oneDollarCount - one_dollar;
+		  fiveDollarCount = fiveDollarCount - five_dollars;
+		  tenDollarCount = tenDollarCount - ten_dollars;
+		  twentyDollarCount = twentyDollarCount - twenty_dollars;
+		  thirtyDollarCount = thirtyDollarCount - thirty_dollars;
+		  fiftyDollarCount = fiftyDollarCount - fifty_dollars;
+		  oneHundredDollarCount = oneHundredDollarCount - one_hundred_dollars;
+		  twoHundredDollarCount = twoHundredDollarCount - two_hundred_dollars;
+		  //*Add the amount the customer entered to keep track of profit
 		  total = total + Cash_Amount;
 		  //*Subtract change from total 
 		  total = total - real_change;
+		  
+		  //*The following lines of code will then increment the monetary counters based on what the total is after the cash amount has been entered and the change dispersed
+		  //*The variable calculationTotal is declared to be used in the calculations without altering the total variable
+		  double calculationTotal = total;
+		  
+		  int two_hundred_dollars_count = (int) calculationTotal / 200;
+		  calculationTotal = calculationTotal % 200; 
+			
+			int one_hundred_dollars_count = (int) calculationTotal / 100;
+			calculationTotal = calculationTotal % 100; 
+			
+			int fifty_dollars_count = (int) calculationTotal / 50;
+			calculationTotal = calculationTotal % 50; 
+			
+			int thirty_dollars_count = (int) calculationTotal / 30;
+			calculationTotal = calculationTotal % 30; 
+			
+			int twenty_dollars_count = (int) calculationTotal / 20;
+			calculationTotal = calculationTotal % 20; 
+			
+			int ten_dollars_count = (int) calculationTotal / 10;
+			calculationTotal = calculationTotal % 10;
+			
+			int five_dollars_count = (int) calculationTotal / 5;
+			calculationTotal = calculationTotal % 5;
+			
+			int one_dollar_count = (int)calculationTotal / 1;
+			calculationTotal = calculationTotal % 1;
+			
+			double fifty_cent_count = calculationTotal / 0.5;
+			calculationTotal = calculationTotal % 0.5;
+			
+			double ten_cents_count = (int) calculationTotal % 0.10;
+			calculationTotal = calculationTotal % 0.10;
+			
+			double five_cents_count = (int) calculationTotal; 
+			//*Now that we have calculated the amount by which each every monetary counter should be incremented we have to write code that will add these values to the monetary counters
+			fiveCentCount = (int) (fiveCentCount + five_cents_count); 
+			  tenCentCount = (int) (tenCentCount + ten_cents_count);
+			  fiftyCentCount = (int) (fiftyCentCount + fifty_cent_count);
+			  oneDollarCount = oneDollarCount + one_dollar_count;
+			  fiveDollarCount = fiveDollarCount + five_dollars_count;
+			  tenDollarCount = tenDollarCount + ten_dollars_count;
+			  twentyDollarCount = twentyDollarCount + twenty_dollars_count;
+			  thirtyDollarCount = thirtyDollarCount + thirty_dollars_count;
+			  fiftyDollarCount = fiftyDollarCount + fifty_dollars_count;
+			  oneHundredDollarCount = oneHundredDollarCount + one_hundred_dollars_count;
+			  twoHundredDollarCount = twoHundredDollarCount + two_hundred_dollars_count;
+			  //*The code above increments each monetary counter based on how much money is entered by the user
+			
 		  
 		  System.out.println("                                                                             ");
 		  System.out.println("Your change is N$: " + new DecimalFormat("0.00").format(real_change));
@@ -224,8 +274,7 @@ public static void customerMenu() {
 		  System.out.println("                                                                             ");
 		  System.out.println("                                                                             ");
 		  		  
-
-			    //*Receipt layout 
+              //*Receipt layout 
 			  System.out.println("**                                       X AVENDERS VENDING MACHINE                                      **");
 			  System.out.println("                                          ");
 			  System.out.println("***********************************************************************************************************");
@@ -295,7 +344,7 @@ public static void customerMenu() {
 						  new DecimalFormat("0").format(five_cents) + " x 5c; " );
 				  System.out.println("                                                                             ");
 				  System.out.println("*******************************************************************************************************");
-				  System.out.println("Thank you. Come Again!");
+				  System.out.println("Thank you. Come Again :)");
 
 	   }
 	   else {System.out.println("The amount you have entered is not sufficiant for this transaction :(");}
