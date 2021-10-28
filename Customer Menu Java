@@ -275,7 +275,7 @@ public static void customerMenu() {
 		  System.out.println("                                                                             ");
 		  		  
               //*Receipt layout 
-			  System.out.println("**                                       X AVENDERS VENDING MACHINE                                      **");
+			  System.out.println("**                                       X AVENDERS VENDING MACHINE X                                    **");
 			  System.out.println("                                          ");
 			  System.out.println("***********************************************************************************************************");
 			  
@@ -328,7 +328,6 @@ public static void customerMenu() {
 			   System.out.println(String.format("%-30s%s" ,C1900, "N$"+ new DecimalFormat("0.00").format(C1900Price)) + "               " + String.format("%-30s%s", QTY_Of_C1900, "N$"+ new DecimalFormat("0.00").format(totalCost18)) );
 			   System.out.println("                                          ");
 			   System.out.println("----------------------------------------------------------------------------------------------------------");
-			   System.out.println("                                                                             ");
 			   System.out.println("Total                                                                                   " + "N$" +  new DecimalFormat("0.00").format(Actual_Total_Cost));
 			   System.out.println("                                                                             ");
 			   System.out.println("Tendered                                                                                " + "N$" +  new DecimalFormat("0.00").format(Cash_Amount));
@@ -342,10 +341,19 @@ public static void customerMenu() {
 						  +new DecimalFormat("0").format(fifty_cent)  + " x 50c; " + 
 						  new DecimalFormat("0").format(ten_cents) + " x 10c; " + 
 						  new DecimalFormat("0").format(five_cents) + " x 5c; " );
+				  System.out.println("*******************************************************************************************************");
 				  System.out.println("                                                                             ");
+				  //*We set the desired format the date and time and print it out to be displayed in the receipt
+				  SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy_HH:mm:ss");  
+				  Date date = new Date();  
+				  System.out.println("Date: " + formatter.format(date));
 				  System.out.println("*******************************************************************************************************");
 				  System.out.println("Thank you. Come Again :)");
+				  System.out.println("*******************************************************************************************************");
 
 	   }
-	   else {System.out.println("The amount you have entered is not sufficiant for this transaction :(");}
+	   else {System.out.println("The amount you have entered is not sufficiant for this transaction :(");
+	         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy_HH:mm:ss");  
+		     Date date = new Date();  
+		     System.out.println("Date: " + formatter.format(date));}
 	}
