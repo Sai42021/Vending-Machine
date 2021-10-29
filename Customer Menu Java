@@ -14,9 +14,9 @@ public static void customerMenu() {
 	    
 	   Scanner CustomerInput = new Scanner(System.in);
 	   
-      System.out.println("Available products, codes and PRICES(N$) shown below: ");
-	   
 	   System.out.println("                                          ");
+       System.out.println("Available products, codes and PRICES(N$) shown below: ");
+       System.out.println("-----------------------------------------------------");
 	   System.out.println(C0001 + "_N$" + new DecimalFormat("0.00").format(C0001Price) );
 	   System.out.println("                                          ");
        System.out.println(C0002 + "_N$" + new DecimalFormat("0.00").format(C0002Price));
@@ -48,6 +48,7 @@ public static void customerMenu() {
        System.out.println(C1800 + "_N$" + new DecimalFormat("0.00").format(C1800Price));
        System.out.println("                                          ");
        System.out.println(C1900 + "_N$" + new DecimalFormat("0.00").format(C1900Price));
+       System.out.println("-----------------------------------------------------");
 	   System.out.println("                                          ");
 
 	   System.out.println("Please enter the quantity of the item(s) you would like to purchase NB: ENTER (0) FOR THE THE ITEMS YOUR NOT INTERESTED IN!");
@@ -130,12 +131,8 @@ public static void customerMenu() {
 	   
 	   System.out.println("Enter quantity of " + C1900 + "_" + "N$"+ new DecimalFormat("0.00").format(C1900Price) + ": ");
 	   int QTY_Of_C1900 = CustomerInput.nextInt();
-	   C1900count = C1800count - QTY_Of_C1800;
-	   System.out.println("                                          ");
-	   
-	   System.out.println("Exit(C2100)");
-	   System.out.println("                                          ");
-	   
+	   C1900count = C1800count - QTY_Of_C1800;	   
+	   System.out.println("-----------------------------------------------------");
 	   
 	   double totalCost1 = C0001Price * QTY_Of_C0001;
 	   double totalCost2 = C0002Price * QTY_Of_C0002;
@@ -159,7 +156,7 @@ public static void customerMenu() {
 			                       totalCost13 + totalCost14 + totalCost15 + totalCost16 + totalCost17 + totalCost18);
 	   
 	   System.out.println("Your total is N$" + new DecimalFormat("0.00").format(Actual_Total_Cost));
-	   System.out.println("                                          ");
+	   System.out.println("-----------------------------------------------------");
 	   
 	   System.out.println("Enter cash amount: ");
 	   double Cash_Amount = CustomerInput.nextDouble();
@@ -268,8 +265,9 @@ public static void customerMenu() {
 			  //*The code above increments each monetary counter based on how much money is entered by the user
 			
 		  
-		  System.out.println("                                                                             ");
+		  System.out.println("-----------------------------------------------------");
 		  System.out.println("Your change is N$: " + new DecimalFormat("0.00").format(real_change));
+		  System.out.println("-----------------------------------------------------");
 		  
 		  System.out.println("                                                                             ");
 		  System.out.println("                                                                             ");
@@ -356,4 +354,14 @@ public static void customerMenu() {
 	         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy_HH:mm:ss");  
 		     Date date = new Date();  
 		     System.out.println("Date: " + formatter.format(date));}
+	   //*END OF RECEIPT
+	   //*END OF CUSTOMER MENU 
+	   
+	   //*We gave the Owner the option to return to the beginning of the owner menu or customer menu in case of any mistakes
+		
+		System.out.println("Enter the owners_pin to return to the beginning of the Owner menu OR Enter Item_code to return to beginning of customer menu. NB: Enter 1 if you'd rather opt out of both!");
+		int Owner_response = CustomerInput.nextInt();
+		if (Owner_response == 3692){customerMenu();}
+		else if (Owner_response == 4812){ownerMenu();}
+	              else if(Owner_response == 1) {System.out.println("Thank you for using avenders vending machine.");}
 	}
