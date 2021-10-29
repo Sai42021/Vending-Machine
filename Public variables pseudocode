@@ -1,3 +1,4 @@
+Declaration of public variables to be used in multiple methods:
 //*We declared the products as public strings so they can be called in the customerMenu() & ownerMenu()
 	   Declare String C0001 = "M&M(C0001)";
 	   Declare String C0002 = "Maltesers(C0002)";
