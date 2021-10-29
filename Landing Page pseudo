@@ -1,14 +1,28 @@
 String: Error_message 
 Variables: code, Item_code, owners_pin
 Integer: code, Item_code, owners_pin
-Start
-Prompt user for code
-Get code 
-if code == Item_code
- THEN Customer menu()
-   elseif code == owners_pin
-     THEN Owner_menu()
-       else display Error_message
-    endif 
-    endif 
-    End. 
+
+
+1. Start
+2. //*Display welcome message and codes 
+       Print ("WELCOME TO THE AVENDERS VENDING MACHINE")
+          Print ("The vending machine has a variety of products available for purchase. ")
+	    Print ("All you have to do is enter the item code shown below.")
+	      Print ("Each item selection is limited to 25.")
+	          Print ("-----------------------------------------------------")
+	             Print (" ")
+		       Print ("Item_code = 3692 & owners_pin = Restricted to admins ")
+	                  Print ("-----------------------------------------------------")
+3. //*Declare code variables
+        int Item_code = 3692
+          int owners_pin = 4812;
+4. Prompt user for code
+5. Get code 
+6. if code == Item_code
+   THEN Customer menu()
+     elseif code == owners_pin
+       THEN Owner_menu()
+         else display Error_message
+      endif 
+ endif 
+7. End.
