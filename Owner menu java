@@ -1,6 +1,7 @@
-  public static void ownerMenu() {
+ //*Beginning of Owner menu 
+		    public static void ownerMenu() {
 			Scanner userInput = new Scanner(System.in);
-			//* The verification code is 8162
+			//*NB:The verification code is 8162!!!!
 			System.out.println("Please enter verification code: ");
 			int verificationCode = userInput.nextInt();
 			
@@ -245,7 +246,7 @@
 					
 					System.out.println("                                          ");
 					
-					System.out.println("Enter the code of the item who's price you would like to alter and enter the new price of the item seperated by a single space: e.g C0001 20.00 NB:ITEM CODE SHOULD NOT CHANGE!!!: ");
+					System.out.println("Enter the code of the item who's price you would like to alter and enter the new price of the item seperated by a single space: e.g C0001 20 . NB round off all values no decimals allowed! ");
 					System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 					Scanner itemAlter = new Scanner(System.in); 
 					String fullentry = itemAlter.nextLine();
@@ -255,77 +256,77 @@
 					String itemCode = fullentry.substring(0,fullentryParts);
 					String newPricePosition = fullentry.substring(fullentry.lastIndexOf(" ") + 1);
 					
-					double newPrice = Integer.parseInt(newPricePosition);
-					
+					int newPriceint = Integer.parseInt(newPricePosition);
+					Double newPrice = Double.valueOf(newPriceint);										
 					
 					//*We created a switch statement to change a products price or name based on what the admins inputs
 					switch(itemCode) {
 					
 					   case "C0001":
 						C0001Price = newPrice;
-						System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 					    break;
 					   case "C0002":
 						   C0002Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 					    break;
 					   case "C0003":
 						   C0003Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0004":
 						   C0004Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0007":
 						   C0007Price =  newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C8000":
 						   C8000Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C9000":
 						   C9000Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0100":
 						   C0100Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0200":
 						   C0200Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0300":
 						   C0300Price = newPrice ;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0400":
 						   C0400Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0500":
 						   C0500Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0600":
 						   C0600Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C0700":
 						   C0700Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C1800":
 						   C1800Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
 					   case "C1900":
 						   C1900Price = newPrice;
-						   System.out.println("You have successfully changed this items price to N$" + newPrice + "!");
+						   System.out.println("You have successfully changed this items price to N$" + new DecimalFormat("0.00").format(newPrice) + "!");
 						    break;
-						default: System.out.println("Invalid entry! Please check your spelling and spacing." + "'" + itemCode + "'" + " and " + "'" + newPrice + "'" );    	
+						default: System.out.println("Invalid entry! Please check your spelling and spacing." + "'" + itemCode + "'" + " and " + "'" + new DecimalFormat("0.00").format(newPrice) + "'" );    	
 					}
 					System.out.println("-----------------------------------------------------");
 				} 
@@ -378,46 +379,57 @@
 					
 					case "N$0.05":
 						fiveCentCount = newCa$hAmount;
+						total = total + (newCa$hAmount * fiveCent);
 						System.out.println("You have successfully changed N$0.05 count"+ " to " + newCa$hAmount );
 						break;
 					case "N$0.10":
 						tenCentCount = newCa$hAmount;
+						total = total + (newCa$hAmount * tenCent);
 						System.out.println("You have successfully changed N$0.10 count" + " to " + newCa$hAmount );
 						break;
 					case "N$0.50":
 						fiftyCentCount = newCa$hAmount;
+						total = total + (newCa$hAmount * fiftyCents);
 						System.out.println("You have successfully changed N$0.50 count" + " to " + newCa$hAmount );
 						break;
 					case "N$1.00":
 						oneDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * oneDollar);
 						System.out.println("You have successfully changed N$1.00 count" + " to " + newCa$hAmount );
 						break;
 					case "N$5.00":
 						fiveDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * fiveDollar);
 						System.out.println("You have successfully changed N$5.00 count" + " to " + newCa$hAmount );
 						break;
 					case "N$10.00":
 						tenDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * tenDollar);
 						System.out.println("You have successfully changed N$10.00 count" + " to " + newCa$hAmount );
 						break;
 					case "N$20.00":
 						twentyDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * twentyDollar);
 						System.out.println("You have successfully changed N$20.00 count" + " to " + newCa$hAmount );
 						break;
 					case "N$30.00":
 						thirtyDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * thirtyDollar);
 						System.out.println("You have successfully changed N$30.00 count" + " to " + newCa$hAmount );
 						break;
 					case "N$50.00":
 						fiftyDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * fiftyDollar);
 						System.out.println("You have successfully changed N$50.00 count" + " to " + newCa$hAmount );
 						break;
 					case "N$100.00":
-						oneHundredDollar = newCa$hAmount;
+						oneHundredDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * oneHundredDollar);
 						System.out.println("You have successfully changed N$100.00 count" + " to " + newCa$hAmount );
 						break;
 					case "N$200.00":
 						twoHundredDollarCount = newCa$hAmount;
+						total = total + (newCa$hAmount * twoHundredDollar);
 						System.out.println("You have successfully changed N$200.00 count" + " to " + newCa$hAmount );
 						break;
 						default: System.out.println("Invalid entry!! Check entry and try again.");
@@ -428,6 +440,8 @@
 				else if(actionCode == 2314) {
 					Scanner cash0utInput = new Scanner(System.in); 
 					System.out.println("                                       ");
+					System.out.println("There is a total of N$" + new DecimalFormat("0.00").format(total) + " in the vending machine.");
+					System.out.println("-----------------------------------------------------");
 					System.out.println("Enter the amount you want to cash out: ");
 					System.out.println("-----------------------------------------------------");
 					double cashOutAmountToDesplay = cash0utInput.nextDouble();
@@ -467,20 +481,20 @@
 					
 					double five_cents = (int) cashOutAmount; 
 					
-					  fiveCentCount = (int) (100 - five_cents); 
-					  tenCentCount = (int) (100 - ten_cents);
-					  fiftyCentCount = (int) (100 - fifty_cent);
-					  oneDollarCount = 500 - one_dollar;
-					  fiveDollarCount = 100 - five_dollars;
-					  tenDollarCount = 100 - ten_dollars;
-					  twentyDollarCount = 100 - twenty_dollars;
-					  thirtyDollarCount = 100 - thirty_dollars;
-					  fiftyDollarCount = 50 - fifty_dollars;
-					  oneHundredDollarCount = 20 - one_hundred_dollars;
-					  twoHundredDollarCount = 20 - two_hundred_dollars;
+					  fiveCentCount = (int) (fiveCentCount - five_cents); 
+					  tenCentCount = (int) (tenCentCount - ten_cents);
+					  fiftyCentCount = (int) (fiftyCentCount - fifty_cent);
+					  oneDollarCount = oneDollarCount - one_dollar;
+					  fiveDollarCount = fiveDollarCount - five_dollars;
+					  tenDollarCount = tenDollarCount - ten_dollars;
+					  twentyDollarCount = twentyDollarCount - twenty_dollars;
+					  thirtyDollarCount = thirtyDollarCount - thirty_dollars;
+					  fiftyDollarCount = fiftyDollarCount - fifty_dollars;
+					  oneHundredDollarCount = oneHundredDollarCount - one_hundred_dollars;
+					  twoHundredDollarCount = twoHundredDollarCount - two_hundred_dollars;
 					  total = total - real_cashOutAmount;
 					  
-					  System.out.println("You have successfully cashed out " + new DecimalFormat("0.00").format(cashOutAmountToDesplay));
+					  System.out.println("You have successfully cashed out N$" + new DecimalFormat("0.00").format(cashOutAmountToDesplay));
 					  System.out.println("-----------------------------------------------------");
 					  System.out.println("Disbursed as follows: " + two_hundred_dollars + " x N$ 200; " + one_hundred_dollars 
 							  + " x N$ 100; " + fifty_dollars + " x N$ 50; " + thirty_dollars 
@@ -607,7 +621,7 @@
 			    System.out.println("                                          ");
 			 //*We gave the Owner the option to return to the beginning of the owner menu or customer menu in case of any mistakes
 			
-			System.out.println("Enter the owners_pin to return to the beginning of the Owner menu OR Enter Item_code to return to beginning of customer menu. NB:Enter no if you'd rather opt out of both!");
+			System.out.println("Enter the owners_pin to return to the beginning of the Owner menu OR Enter Item_code to return to beginning of customer menu. NB:Enter 1 if you'd rather opt out of both!");
 			int Owner_response = userInput.nextInt();
 			if (Owner_response == 3692){customerMenu();}
 			else if (Owner_response == 4812){ownerMenu();}
