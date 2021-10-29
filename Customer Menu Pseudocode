@@ -105,7 +105,7 @@ Display ("Enter quantity of " + C0700 + "_" + "N$"+ new DecimalFormat("0.00").fo
 Display ("Enter quantity of " + C1900 + "_" + "N$"+ new DecimalFormat("0.00").format(C1900Price) + ": ")
 	   Declare int QTY_Of_C1900 = 
 	   C1900count = C1800count - QTY_Of_C1800 
- Display ("Exit(C2100)")
+ 
   
 	   double totalCost1 = C0001Price * QTY_Of_C0001
 
