@@ -278,53 +278,70 @@ public static void customerMenu() {
 			  System.out.println("***********************************************************************************************************");
 			  
 			   System.out.println(String.format("%-30s%s" , "NAME", "PRICE") + "                 " + String.format("%-30s%s", "QTY", "TOTAL" ));
+               if(QTY_Of_C0001>0){
 			   System.out.println(String.format("%-30s%s" ,C0001, "N$"+ new DecimalFormat("0.00").format(C0001Price)) + "               " + String.format("%-30s%s", QTY_Of_C0001, "N$"+ new DecimalFormat("0.00").format(totalCost1)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0002>0){
 			   System.out.println(String.format("%-30s%s" ,C0002, "N$"+ new DecimalFormat("0.00").format(C0002Price)) + "               " + String.format("%-30s%s", QTY_Of_C0002, "N$"+ new DecimalFormat("0.00").format(totalCost2)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0003>0){
 			   System.out.println(String.format("%-30s%s" ,C0003, "N$"+ new DecimalFormat("0.00").format(C0003Price)) + "                " + String.format("%-30s%s", QTY_Of_C0003, "N$"+ new DecimalFormat("0.00").format(totalCost3)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0004>0){
 			   System.out.println(String.format("%-30s%s" ,C0004, "N$"+ new DecimalFormat("0.00").format(C0004Price)) + "                " + String.format("%-30s%s", QTY_Of_C0004, "N$"+ new DecimalFormat("0.00").format(totalCost4)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0007>0){
 			   System.out.println(String.format("%-30s%s" ,C0007, "N$"+ new DecimalFormat("0.00").format(C0007Price)) + "               " + String.format("%-30s%s", QTY_Of_C0007, "N$"+ new DecimalFormat("0.00").format(totalCost7)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C8000>0){
 			   System.out.println(String.format("%-30s%s" ,C8000, "N$"+ new DecimalFormat("0.00").format(C8000Price)) + "               " + String.format("%-30s%s", QTY_Of_C8000, "N$"+ new DecimalFormat("0.00").format(totalCost8)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C9000>0){
 			   System.out.println(String.format("%-30s%s" ,C9000, "N$"+ new DecimalFormat("0.00").format(C9000Price)) + "               " + String.format("%-30s%s", QTY_Of_C9000, "N$"+ new DecimalFormat("0.00").format(totalCost9)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0100>0){
 			   System.out.println(String.format("%-30s%s" ,C0100, "N$"+ new DecimalFormat("0.00").format(C0100Price)) + "               " + String.format("%-30s%s", QTY_Of_C0100, "N$"+ new DecimalFormat("0.00").format(totalCost10)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0200>0){
 			   System.out.println(String.format("%-30s%s" ,C0200, "N$"+ new DecimalFormat("0.00").format(C0200Price)) + "               " + String.format("%-30s%s", QTY_Of_C0200, "N$"+ new DecimalFormat("0.00").format(totalCost11)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0300>0){
 			   System.out.println(String.format("%-30s%s" ,C0300, "N$"+ new DecimalFormat("0.00").format(C0300Price)) + "               " + String.format("%-30s%s", QTY_Of_C0300, "N$"+ new DecimalFormat("0.00").format(totalCost12)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0400>0){
 			   System.out.println(String.format("%-30s%s" ,C0400, "N$"+ new DecimalFormat("0.00").format(C0400Price)) + "               " + String.format("%-30s%s", QTY_Of_C0400, "N$"+ new DecimalFormat("0.00").format(totalCost13)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0500>0){
 			   System.out.println(String.format("%-30s%s" ,C0500, "N$"+ new DecimalFormat("0.00").format(C0500Price)) + "               " + String.format("%-30s%s", QTY_Of_C0500, "N$"+ new DecimalFormat("0.00").format(totalCost14)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0600>0){
 			   System.out.println(String.format("%-30s%s" ,C0600, "N$"+ new DecimalFormat("0.00").format(C0600Price)) + "               " + String.format("%-30s%s", QTY_Of_C0600, "N$"+ new DecimalFormat("0.00").format(totalCost15)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C0700>0){
 			   System.out.println(String.format("%-30s%s" ,C0700, "N$"+ new DecimalFormat("0.00").format(C0700Price)) + "               " + String.format("%-30s%s", QTY_Of_C0700, "N$"+ new DecimalFormat("0.00").format(totalCost16)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C1800>0){
 			   System.out.println(String.format("%-30s%s" ,C1800, "N$"+ new DecimalFormat("0.00").format(C1800Price)) + "               " + String.format("%-30s%s", QTY_Of_C1800, "N$"+ new DecimalFormat("0.00").format(totalCost17)) );
-			   System.out.println("                                          ");
-			   
+			   System.out.println("                                          ");}
+
+           if(QTY_Of_C1900>0){
 			   System.out.println(String.format("%-30s%s" ,C1900, "N$"+ new DecimalFormat("0.00").format(C1900Price)) + "               " + String.format("%-30s%s", QTY_Of_C1900, "N$"+ new DecimalFormat("0.00").format(totalCost18)) );
-			   System.out.println("                                          ");
+			   System.out.println("                                          ");}
+
 			   System.out.println("----------------------------------------------------------------------------------------------------------");
 			   System.out.println("Total                                                                                   " + "N$" +  new DecimalFormat("0.00").format(Actual_Total_Cost));
 			   System.out.println("                                                                             ");
